@@ -31,7 +31,7 @@ function RestaurantPage() {
                     <ul className='grid gap-5'>
                         {
                             restaurant?.menu.map((item) => {
-                                return <li key={item.id} className='flex'>
+                                return <li key={item.id} className='flex shadow-md'>
                                     <figure className='hidden lg:block' style={{ position: 'relative', width: '200px', minHeight: '120px' }}>
                                         <Image
                                             src={item?.image.img}

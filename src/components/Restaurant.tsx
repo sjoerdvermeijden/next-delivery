@@ -7,7 +7,7 @@ import { RestaurantType } from '@/types/Restaurant'
 function Restaurant({ name, description, image }: RestaurantType) {
     return (
         <>
-            <div className='flex rounded-l-md'>
+            <div className='flex rounded-l-md shadow-md'>
                 <figure className='hidden lg:block rounded-l-md' style={{ position: 'relative', width: '200px', minHeight: '120px' }}>
                     <Image
                         src={image?.img}
