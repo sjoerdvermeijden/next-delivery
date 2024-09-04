@@ -39,12 +39,14 @@ function RestaurantPage() {
                                             fill
                                             style={{
                                                 objectFit: 'cover',
+                                                borderTopLeftRadius: '6px',
+                                                borderBottomLeftRadius: '6px'
                                             }}
                                             alt="Picture of the author"
                                         />
                                     </figure>
-                                    <div className='p-5 bg-gray-100 relative grow'>
-                                        <button className='absolute right-0 top-0 bg-gray-400 text-white py-2 px-4'>+</button>
+                                    <div className='p-5 bg-gray-100 relative grow rounded-r-md'>
+                                        <button className='absolute right-0 top-0 bg-gray-400 text-white py-2 px-4 rounded-tr-md rounded-bl-md hover:bg-gray-500 transition-colors'>+</button>
                                         <h3 className='font-bold text-xl mb-2'>{item.title}</h3>
                                         <p className='mb-2'>{item.description}</p>
                                         <span className='font-bold'>€{item.price}</span>
