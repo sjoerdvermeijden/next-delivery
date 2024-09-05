@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 
-import Button from './Button/Button'
+import { CartContext } from '@/context/CartContext'
+import { TotalContext } from '@/context/TotalContext'
 
 type Props = {}
 
 function Cart({ }: Props) {
+    const [cartItems, setCartItems] = useContext(CartContext);
+    const { total, setTotal } = useContext(TotalContext);
+
     const [responsiveState, setResponsiveState] = useState<Boolean>(true);
 
     const cartView = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -17,6 +21,36 @@ function Cart({ }: Props) {
         e.preventDefault();
 
         setResponsiveState(false)
+    }
+
+    const addItem = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, id: number) => {
+        e.preventDefault();
+
+        const cartArray = cartItems.map((item) => {
+            if (item.id === id) {
+                item.count++;
+            }
+            setTotal(total + item.price)
+            return item;
+        });
+
+        setCartItems(cartArray);
+    }
+
+    const subtractItem = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, id: number) => {
+        e.preventDefault();
+
+        const cartArray = cartItems.map((item) => {
+            if (item.id === id) {
+                item.count--;
+            }
+            setTotal(total - item.price)
+            return item;
+        });
+        setCartItems(cartArray);
+
+        const newArray = cartArray.filter((item) => item.count > 0);
+        setCartItems(newArray);
     }
 
     return (
