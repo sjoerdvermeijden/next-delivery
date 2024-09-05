@@ -2,7 +2,6 @@ export const restaurants = [
     {
         id: 0,
         name: 'Vapiano',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         categories: ['Amerikaanse pizza', 'Italiaanse pizza'],
         image : {
             img: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
@@ -64,7 +63,6 @@ export const restaurants = [
     {
         id: 1,
         name: 'KFC',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         categories: ['Amerikaanse pizza', 'Italiaanse pizza'],
         image : {
             img: 'https://images.unsplash.com/photo-1585703900468-13c7a978ad86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
@@ -131,7 +129,6 @@ export const restaurants = [
     {
         id: 2,
         name: 'McDonalds',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         categories: ['Amerikaanse pizza', 'Italiaanse pizza'],
         image : {
             img: 'https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80',
@@ -193,7 +190,6 @@ export const restaurants = [
     {
         id: 3,
         name: 'Italiano',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         categories: ['Amerikaanse pizza', 'Italiaanse pizza'],
         image : {
             img: 'https://images.unsplash.com/photo-1615584240522-7fe7ed4dadee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80',

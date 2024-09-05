@@ -1,7 +1,7 @@
 export type RestaurantType = {
     id: number,
     name: string,
-    description: string,
+    categories: string[],
     image: {
         img: string
         alt: string,

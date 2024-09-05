@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import { RestaurantType } from '@/types/Restaurant'
 
-function Restaurant({ name, description, image }: RestaurantType) {
+function Restaurant({ name, categories, image }: RestaurantType) {
     return (
         <>
             <div className='flex rounded-l-md shadow-md'>
@@ -23,7 +23,6 @@ function Restaurant({ name, description, image }: RestaurantType) {
                 </figure>
                 <div className='p-5 bg-gray-100 grow group-hover:bg-gray-200 transition-colors rounded-r-md'>
                     <h3 className='font-bold mb-2'>{name}</h3>
-                    <p>{description}</p>
                 </div>
             </div>
         </>
