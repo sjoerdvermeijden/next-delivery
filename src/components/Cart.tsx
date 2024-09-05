@@ -89,7 +89,7 @@ function Cart({ }: Props) {
                     }
                 </ul>
                 <p className='mb-3 font-bold'>Totaal: €{Math.abs(total).toFixed(2)}</p>
-                <button className="px-2 py-1 bg-red-600 rounded text-white w-full disabled:opacity-50" onClick={(e) => orderButton(e)}> Bestellen</button>
+                <button className="px-2 py-1 bg-red-600 rounded text-white w-full disabled:opacity-50" disabled={(cartItems.length <= 0 ? true : false)} onClick={(e) => orderButton(e)}> Bestellen</button>
             </div>
         </>
     )
