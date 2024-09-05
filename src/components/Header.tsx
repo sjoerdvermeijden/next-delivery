@@ -6,7 +6,7 @@ function Header({ }: Props) {
     return (
         <div className='p-4 bg-red-500'>
             <Link href="/">
-                <h1 className='font-bold text-3xl'>BezorgApp</h1>
+                <h1 className='font-bold text-3xl text-gray-800'>BezorgApp</h1>
             </Link>
         </div>
     )

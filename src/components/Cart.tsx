@@ -66,38 +66,29 @@ function Cart({ }: Props) {
                     </button>
                 </div>
                 <ul className={`${responsiveState ? 'hidden' : 'block'} lg:block mb-4`}>
-                    <li className="py-4 border-b border-gray-300">
-                        <div className="flex flex-col items-end">
-                            <div className="w-full">
-                                <div className="flex">
-                                    <p className="mr-1">(4)</p>
-                                    <p className="mb-3 mr-auto">Kapsalon</p>
-                                    <p className="font-bold">€99</p>
-                                </div>
-                            </div>
-                            <div>
-                                <button className='px-2 bg-gray-500 text-white font-light rounded mr-1'>-</button>
-                                <button className='px-2 bg-gray-500 text-white font-light rounded'>+</button>
-                            </div>
-                        </div>
-                    </li>
-                    <li className="py-4 border-b border-gray-300">
-                        <div className="flex flex-col items-end">
-                            <div className="w-full">
-                                <div className="flex">
-                                    <p className="mr-1">(4)</p>
-                                    <p className="mb-3 mr-auto">Kapsalon</p>
-                                    <p className="font-bold">€99</p>
-                                </div>
-                            </div>
-                            <div>
-                                <button className='px-2 bg-gray-500 text-white font-light rounded mr-1'>-</button>
-                                <button className='px-2 bg-gray-500 text-white font-light rounded'>+</button>
-                            </div>
-                        </div>
-                    </li>
+                    {
+                        cartItems.map((item) => {
+                            return (
+                                <li className="py-4 border-b border-gray-300" key={item?.id}>
+                                    <div className="flex flex-col items-end">
+                                        <div className="w-full">
+                                            <div className="flex">
+                                                <p className="mr-1">({item.count})</p>
+                                                <p className="mb-3 mr-auto">{item.title}</p>
+                                                <p className="font-bold">€{(item.price * item.count).toFixed(2)}</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button className='px-2 bg-gray-500 text-white font-light rounded mr-1' onClick={(e) => subtractItem(e, item.id)}>-</button>
+                                            <button className='px-2 bg-gray-500 text-white font-light rounded' onClick={(e) => addItem(e, item.id)}>+</button>
+                                        </div>
+                                    </div>
+                                </li>
+                            )
+                        })
+                    }
                 </ul>
-                <p className='mb-2 font-bold'>Totaal: €</p>
+                <p className='mb-3 font-bold'>Totaal: €{Math.abs(total).toFixed(2)}</p>
                 <button className="px-2 py-1 bg-red-600 rounded text-white w-full disabled:opacity-50" onClick={(e) => orderButton(e)}> Bestellen</button>
             </div>
         </>
