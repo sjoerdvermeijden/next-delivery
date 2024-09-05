@@ -37,7 +37,7 @@ function Restaurant({ name, categories, image, reviews }: RestaurantType) {
                             <span className='mr-1 inline-block'>{averageRrating}</span>
                             <span className='font-normal inline-block text-sm'>({reviews?.length})</span>
                         </p>
-                        <p className='text-sm'>{categories.toString()}</p>
+                        <p className='text-sm'>{categories.join(', ')}</p>
                     </div>
                 </div>
             </div>
