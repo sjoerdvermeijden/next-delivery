@@ -21,6 +21,6 @@ export type RestaurantType = {
         id: number,
         description: string,
         rating: number
-    }
+    }[]
 
 }

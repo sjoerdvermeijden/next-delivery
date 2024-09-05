@@ -4,7 +4,16 @@ import Image from 'next/image'
 
 import { RestaurantType } from '@/types/Restaurant'
 
-function Restaurant({ name, categories, image }: RestaurantType) {
+function Restaurant({ name, categories, image, reviews }: RestaurantType) {
+
+    const ratingArray = reviews.map((item) => {
+        return item.rating;
+    }).reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+    )
+
+    const averageRrating = (ratingArray / reviews.length).toFixed(1);
+
     return (
         <>
             <div className='flex rounded-l-md shadow-md'>
@@ -22,7 +31,14 @@ function Restaurant({ name, categories, image }: RestaurantType) {
                     />
                 </figure>
                 <div className='p-5 bg-gray-100 grow group-hover:bg-gray-200 transition-colors rounded-r-md'>
-                    <h3 className='font-bold mb-2'>{name}</h3>
+                    <h3 className='font-bold mb-2 text-xl'>{name}</h3>
+                    <div className='flex'>
+                        <p className='text-sm flex items-center font-bold mr-3'>
+                            <span className='mr-1 inline-block'>{averageRrating}</span>
+                            <span className='font-normal inline-block text-sm'>({reviews?.length})</span>
+                        </p>
+                        <p className='text-sm'>{categories.toString()}</p>
+                    </div>
                 </div>
             </div>
         </>
