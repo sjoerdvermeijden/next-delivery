@@ -55,7 +55,7 @@ function Cart({ }: Props) {
 
     return (
         <>
-            <div className={`${responsiveState ? 'bottom-0' : 'h-full top-0'} fixed left-0 w-full lg:relative lg:w-80 lg:h-auto  bg-gray-100 p-5`}>
+            <div className={`${responsiveState ? 'bottom-0' : 'h-full top-0'} fixed left-0 w-full lg:relative lg:w-80 lg:h-auto  shadow-lg p-5`}>
                 <div className={`${responsiveState ? 'hidden' : 'mb-5 block'} justify-center items-center flex lg:block`}>
                     <h3 className='text-2xl text-center mr-auto lg:mr-0'>Winkelmandje</h3>
                     <button type="button" className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 lg:hidden" onClick={(e) => cartView(e)}>
@@ -89,7 +89,7 @@ function Cart({ }: Props) {
                     }
                 </ul>
                 <p className='mb-3 font-bold'>Totaal: €{Math.abs(total).toFixed(2)}</p>
-                <button className="px-2 py-1 bg-red-600 rounded text-white w-full disabled:opacity-50" disabled={(cartItems.length <= 0 ? true : false)} onClick={(e) => orderButton(e)}> Bestellen</button>
+                <button className="px-8 py-1 bg-red-500 rounded text-white w-full disabled:opacity-50" disabled={(cartItems.length <= 0 ? true : false)} onClick={(e) => orderButton(e)}>Bestellen €{Math.abs(total).toFixed(2)}</button>
             </div>
         </>
     )

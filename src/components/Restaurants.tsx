@@ -12,7 +12,7 @@ function Restaurants() {
         <>
             <Wrap>
                 <div className='py-20'>
-                    <h3 className='font-bold mb-6 text-2xl'>Restauranten</h3>
+                    <h3 className='font-bold mb-6 text-2xl'>Bestel bij 4 locaties</h3>
                     <ul className='grid gap-5 items-start'>
                         {
                             restaurants.map((item) => {
