@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { faBicycle } from '@fortawesome/free-solid-svg-icons'
+import { faClock } from '@fortawesome/free-solid-svg-icons'
 
 import { RestaurantType } from '@/types/Restaurant'
 
@@ -47,7 +48,12 @@ function Restaurant({ name, categories, image, reviews, delivery_time, delivery_
                         <p className='text-sm'>{categories.join(', ')}</p>
                     </div>
                     <div className='flex items-center'>
-                        <span className='text-sm mr-3'>{delivery_time}</span>
+                        <span className='text-sm mr-4 inline-flex items-center'>
+                            <div className='w-4 h-4 mr-1 -mt-0.5'>
+                                <FontAwesomeIcon icon={faClock} />
+                            </div>
+                            {delivery_time}
+                        </span>
                         <span className='text-sm mr-4 inline-flex items-center'>
                             <div className='w-4 h-4 mr-1 mt-0.5'>
                                 <FontAwesomeIcon icon={faBicycle} className='flex-shrink-0' />
