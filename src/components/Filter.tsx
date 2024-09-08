@@ -15,7 +15,7 @@ type Filter = {
     }
 }
 
-function Filter({ }: Filter) {
+function Filter() {
     const [filterItems, setFilterItems] = useContext(FilterContext);
 
     const addFilter = (e: React.MouseEvent<HTMLElement>, item: Filter) => {
