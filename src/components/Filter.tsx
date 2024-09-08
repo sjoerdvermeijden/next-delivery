@@ -21,8 +21,6 @@ function Filter() {
     const addFilter = (e: React.MouseEvent<HTMLElement>, item: Filter) => {
 
         setFilterItems([...filterItems, item.title])
-
-        console.log(filterItems);
     }
 
     return (
