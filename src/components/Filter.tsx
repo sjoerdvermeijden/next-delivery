@@ -1,15 +1,28 @@
 'use client'
 
-import React from 'react'
+import React, { useContext } from 'react'
 
 import { filters } from '../filters';
 
-type Props = {}
+import { FilterContext } from '@/context/FilterContext';
 
-function Filter({ }: Props) {
+type Filter = {
+    id: number,
+    title: string,
+    image: {
+        src: string,
+        alt: string
+    }
+}
 
-    const addFilter = (e: React.MouseEvent<HTMLElement>) => {
-        console.log('test');
+function Filter({ }: Filter) {
+    const [filterItems, setFilterItems] = useContext(FilterContext);
+
+    const addFilter = (e: React.MouseEvent<HTMLElement>, item: Filter) => {
+
+        setFilterItems([...filterItems, item.title])
+
+        console.log(filterItems);
     }
 
     return (
@@ -18,7 +31,7 @@ function Filter({ }: Props) {
                 {
                     filters?.map((item) => {
                         return (
-                            <li key={Math.random()} onClick={(e) => addFilter(e)}>
+                            <li key={Math.random()} onClick={(e) => addFilter(e, item)}>
                                 <div className='w-20 h-12 bg-red-600 rounded mb-1'></div>
                                 <span className='text-sm'>{item?.title}</span>
                             </li>

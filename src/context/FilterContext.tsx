@@ -6,26 +6,15 @@ import React, {
 } from "react";
 
 type Props = {
-    children: any;
+    children: React.ReactNode;
 };
 
-interface Cartegories {
-    categories: {
-        id: number,
-        title: string,
-        image: {
-            img: string,
-            alt: string
-        }
-    };
-}
-
-type ContextValue = [Cartegories[], Dispatch<SetStateAction<Cartegories[]>>];
+type ContextValue = [string[], Dispatch<SetStateAction<string[]>>];
 
 export const FilterContext = createContext<ContextValue>([[], () => { }]);
 
 export function FilterComponent({ children }: Props) {
-    const [filterItems, setFilterItems] = useState<Cartegories[]>([]);
+    const [filterItems, setFilterItems] = useState<string[]>([]);
 
     return (
         <>
