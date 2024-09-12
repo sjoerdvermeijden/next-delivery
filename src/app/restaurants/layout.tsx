@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Main from '@/components/Main'
 
 export const metadata = {
   title: 'Next.js',
@@ -15,7 +16,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        {children}
+        <Main>
+          {children}
+        </Main>
         <Footer />
       </body>
     </html>

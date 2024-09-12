@@ -23,6 +23,5 @@ const config: Config = {
     }
   },
   plugins: [],
-  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
 };
 export default config;
