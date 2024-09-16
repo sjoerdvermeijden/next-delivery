@@ -1,6 +1,10 @@
-import React from 'react'
+'use client'
+
+import React, { useContext } from 'react'
 
 import Link from 'next/link'
+
+import { FilterContext } from '@/context/FilterContext'
 
 import { restaurants } from '../data'
 
@@ -8,6 +12,8 @@ import Restaurant from '../components/Restaurant'
 import Wrap from '../components/Wrap'
 
 function Restaurants() {
+    const [filterItems, setFilterItems] = useContext(FilterContext);
+
     return (
         <>
             <Wrap>

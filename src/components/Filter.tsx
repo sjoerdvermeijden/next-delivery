@@ -2,6 +2,8 @@
 
 import React, { useContext } from 'react'
 
+import Image from 'next/image';
+
 import { filters } from '../filters';
 
 import { FilterContext } from '@/context/FilterContext';
@@ -20,7 +22,12 @@ function Filter() {
 
     const addFilter = (e: React.MouseEvent<HTMLElement>, item: Filter) => {
 
-        setFilterItems([...filterItems, item.title])
+        if (filterItems.includes(item.title)) {
+            return false;
+        } else {
+            setFilterItems([...filterItems, item.title])
+            console.log(filterItems);
+        }
     }
 
     return (
@@ -30,14 +37,14 @@ function Filter() {
                     filters?.map((item) => {
                         return (
                             <li key={Math.random()} onClick={(e) => addFilter(e, item)}>
-                                <div className='w-20 h-12 bg-red-600 rounded mb-1'></div>
+                                <div className='w-20 h-10 bg-red-500 rounded mb-1'></div>
                                 <span className='text-sm'>{item?.title}</span>
                             </li>
                         )
                     })
                 }
             </ul>
-        </div>
+        </div >
     )
 }
 
