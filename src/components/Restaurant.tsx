@@ -49,22 +49,22 @@ function Restaurant({ name, categories, image, reviews, delivery_time, delivery_
                     </div>
                     <div className='flex items-center'>
                         <span className='text-sm mr-4 inline-flex items-center'>
-                            <div className='w-4 h-4 mr-1 -mt-0.5'>
+                            <div className='w-4 h-4 mr-1 -mt-1'>
                                 <FontAwesomeIcon icon={faClock} />
                             </div>
-                            {delivery_time}
+                            <span>{delivery_time}</span>
                         </span>
                         <span className='text-sm mr-4 inline-flex items-center'>
-                            <div className='w-4 h-4 mr-1 mt-0.5'>
+                            <div className='w-4 h-4 mr-1 -mt-1'>
                                 <FontAwesomeIcon icon={faBicycle} className='flex-shrink-0' />
                             </div>
                             <span>€ {delivery_cost}</span>
                         </span>
                         <span className='text-sm inline-flex items-center'>
-                            <div className='w-4 h-4 mr-1 mt-0.5'>
+                            <div className='w-4 h-4 mr-1 -mt-1'>
                                 <FontAwesomeIcon icon={faBicycle} className='flex-shrink-0' />
                             </div>
-                            € {minimum_order_cost}
+                            <span>€ {minimum_order_cost}</span>
                         </span>
                     </div>
                 </div>

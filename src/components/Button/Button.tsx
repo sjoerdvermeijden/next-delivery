@@ -4,12 +4,6 @@ type Props = {
     children: React.ReactNode;
 }
 
-function Button({ children }: Props) {
-    return (
-        <div className='px-2 py-1 bg-red-600 rounded text-white w-full disabled:opacity-50 text-center'>
-            {children}
-        </div>
-    )
+export const Button = () => {
+    return <button className='bg-red-500 px-2 py-1 rounded-md text-white'>Check</button>
 }
-
-export default Button
