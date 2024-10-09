@@ -2,8 +2,6 @@
 
 import React, { useContext } from 'react'
 
-import Image from 'next/image';
-
 import { filters } from '../filters';
 
 import { FilterContext } from '@/context/FilterContext';
@@ -26,7 +24,6 @@ function Filter() {
             return false;
         } else {
             setFilterItems([...filterItems, item.title])
-            console.log(filterItems);
         }
     }
 

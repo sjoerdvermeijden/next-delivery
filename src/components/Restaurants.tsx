@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 
 import Link from 'next/link'
 
@@ -13,6 +13,12 @@ import Wrap from '../components/Wrap'
 
 function Restaurants() {
     const [filterItems, setFilterItems] = useContext(FilterContext);
+
+    useEffect(() => {
+        console.log(filterItems)
+
+    }, [filterItems])
+
 
     return (
         <>

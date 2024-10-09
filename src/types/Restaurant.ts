@@ -19,7 +19,7 @@ export type RestaurantType = {
         },
         price: number,
         count: number
-    },
+    }[],
     reviews: {
         id: number,
         description: string,
