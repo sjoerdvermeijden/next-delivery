@@ -17,14 +17,6 @@ function Restaurants() {
     const [filterItems, setFilterItems] = useContext(FilterContext);
     const [restaurantItems, setRestaurantItems] = useState<RestaurantType[]>([]);
 
-    useEffect(() => {
-        const result = restaurants.filter((item) => item.categories.sort().toString().includes(filterItems.toString()));
-
-        console.log(result)
-
-
-    }, [filterItems])
-
     return (
         <>
             <Wrap>
@@ -32,7 +24,7 @@ function Restaurants() {
                     <h3 className='font-bold mb-6 text-2xl'>Bestel bij 4 locaties</h3>
                     <ul className='grid gap-5 items-start'>
                         {
-                            restaurants.map((item) => {
+                            restaurantItems.map((item) => {
                                 return <>
                                     <li key={item.id} className='group'>
                                         <Link href={`/restaurants/${item.id}`}>
