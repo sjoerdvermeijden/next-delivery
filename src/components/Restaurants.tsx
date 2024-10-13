@@ -1,10 +1,12 @@
 'use client'
 
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 
 import Link from 'next/link'
 
 import { FilterContext } from '@/context/FilterContext'
+
+import { RestaurantType } from '@/types/Restaurant'
 
 import { restaurants } from '../data'
 
@@ -13,12 +15,15 @@ import Wrap from '../components/Wrap'
 
 function Restaurants() {
     const [filterItems, setFilterItems] = useContext(FilterContext);
+    const [restaurantItems, setRestaurantItems] = useState<RestaurantType[]>([]);
 
     useEffect(() => {
-        console.log(filterItems)
+        const result = restaurants.filter((item) => item.categories.sort().toString().includes(filterItems.toString()));
+
+        console.log(result)
+
 
     }, [filterItems])
-
 
     return (
         <>

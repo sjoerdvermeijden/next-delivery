@@ -33,7 +33,7 @@ function Filter() {
                 {
                     filters?.map((item) => {
                         return (
-                            <li key={Math.random()} onClick={(e) => addFilter(e, item)}>
+                            <li key={Math.random()} onClick={(e) => addFilter(e, item)} className='hover:cursor-pointer'>
                                 <div className='w-20 h-10 bg-red-500 rounded mb-1'></div>
                                 <span className='text-sm'>{item?.title}</span>
                             </li>
