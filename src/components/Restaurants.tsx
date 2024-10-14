@@ -24,7 +24,7 @@ function Restaurants() {
                     <h3 className='font-bold mb-6 text-2xl'>Bestel bij 4 locaties</h3>
                     <ul className='grid gap-5 items-start'>
                         {
-                            restaurantItems.map((item) => {
+                            restaurants.map((item) => {
                                 return <>
                                     <li key={item.id} className='group'>
                                         <Link href={`/restaurants/${item.id}`}>
