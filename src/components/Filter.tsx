@@ -7,6 +7,8 @@ import { filters } from '../filters';
 import { FilterContext } from '@/context/FilterContext';
 import { RestaurantContext } from '@/context/RestaurantContext';
 
+import { restaurants } from '@/data';
+
 type Filter = {
     id: number,
     title: string,
@@ -26,7 +28,20 @@ function Filter() {
             let filterList = filterItems
             filterList.splice(index, 1);
             setFilterItems([...filterList])
+
+
         } else {
+
+            // const newArray = restaurants.map((restaurant) => {
+            //     if (restaurant.categories.includes(item.title)) {
+            //         return item;
+            //     } else {
+            //         return false;
+            //     }
+            // })
+
+            // setRestaurantItems([...restaurantItems, ...newArray]);
+
             setFilterItems([...filterItems, item.title])
         }
     }
