@@ -5,6 +5,7 @@ import React from 'react'
 import { TotalComponent } from '@/context/TotalContext'
 import { CartComponent } from '@/context/CartContext'
 import { FilterComponent } from '@/context/FilterContext'
+import { RestaurantComponent } from '@/context/RestaurantContext'
 
 type Props = {
     children: React.ReactNode
@@ -12,13 +13,15 @@ type Props = {
 
 function Providers({ children }: Props) {
     return (
-        <TotalComponent>
-            <CartComponent>
-                <FilterComponent>
-                    {children}
-                </FilterComponent>
-            </CartComponent>
-        </TotalComponent>
+        <RestaurantComponent>
+            <TotalComponent>
+                <CartComponent>
+                    <FilterComponent>
+                        {children}
+                    </FilterComponent>
+                </CartComponent>
+            </TotalComponent>
+        </RestaurantComponent>
     )
 }
 

@@ -1,12 +1,11 @@
 'use client'
 
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 
 import Link from 'next/link'
 
 import { FilterContext } from '@/context/FilterContext'
-
-import { RestaurantType } from '@/types/Restaurant'
+import { RestaurantContext } from '@/context/RestaurantContext'
 
 import { restaurants } from '../data'
 
@@ -15,7 +14,7 @@ import Wrap from '../components/Wrap'
 
 function Restaurants() {
     const [filterItems, setFilterItems] = useContext(FilterContext);
-    const [restaurantItems, setRestaurantItems] = useState<RestaurantType[]>([]);
+    const [restaurantItems, setRestaurantItems] = useContext(RestaurantContext);
 
     return (
         <>

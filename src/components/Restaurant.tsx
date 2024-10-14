@@ -11,13 +11,13 @@ import { RestaurantType } from '@/types/Restaurant'
 
 function Restaurant({ name, categories, image, reviews, delivery_time, delivery_cost, minimum_order_cost }: RestaurantType) {
 
-    const ratingArray = reviews.map((item) => {
+    const ratingArray = reviews?.map((item) => {
         return item.rating;
     }).reduce(
         (accumulator, currentValue) => accumulator + currentValue,
     )
 
-    const averageRrating = (ratingArray / reviews.length).toFixed(1);
+    const averageRrating = (ratingArray / reviews?.length).toFixed(1);
 
     return (
         <>
@@ -45,7 +45,7 @@ function Restaurant({ name, categories, image, reviews, delivery_time, delivery_
                             <span className='inline-block mr-1'>{averageRrating}</span>
                             <span className='font-normal inline-block text-sm'>({reviews?.length})</span>
                         </div>
-                        <p className='text-sm'>{categories.join(', ')}</p>
+                        <p className='text-sm'>{categories}</p>
                     </div>
                     <div className='flex items-center'>
                         <span className='text-sm mr-4 inline-flex items-center'>
