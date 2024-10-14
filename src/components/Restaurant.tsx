@@ -39,7 +39,7 @@ function Restaurant({ name, categories, image, reviews, delivery_time, delivery_
                     <h3 className='font-bold mb-2 text-xl'>{name}</h3>
                     <div className='flex mb-2'>
                         <div className='text-sm flex items-center font-bold mr-3'>
-                            <div className='w-4 h-4 mr-2'>
+                            <div className='w-4 h-4 mr-2 -mt-1.5'>
                                 <FontAwesomeIcon icon={faStar} color="orange" className='flex-shrink-0' />
                             </div>
                             <span className='inline-block mr-1'>{averageRrating}</span>
