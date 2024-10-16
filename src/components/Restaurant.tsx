@@ -1,11 +1,8 @@
 import React from 'react'
 
-import Image from 'next/image'
+import { IconClock, IconBike, IconBasket, IconStarFilled } from '@tabler/icons-react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
-import { faBicycle } from '@fortawesome/free-solid-svg-icons'
-import { faClock } from '@fortawesome/free-solid-svg-icons'
+import Image from 'next/image'
 
 import { RestaurantType } from '@/types/Restaurant'
 
@@ -39,8 +36,8 @@ function Restaurant({ name, categories, image, reviews, delivery_time, delivery_
                     <h3 className='font-bold mb-2 text-xl'>{name}</h3>
                     <div className='flex mb-2'>
                         <div className='text-sm flex items-center font-bold mr-3'>
-                            <div className='w-4 h-4 mr-2 -mt-1.5'>
-                                <FontAwesomeIcon icon={faStar} color="orange" className='flex-shrink-0' />
+                            <div className='w-4 h-4 mr-2 -mt-0.5'>
+                                <IconStarFilled stroke={2} size={17} color="orange" />
                             </div>
                             <span className='inline-block mr-1'>{averageRrating}</span>
                             <span className='font-normal inline-block text-sm'>({reviews?.length})</span>
@@ -49,20 +46,20 @@ function Restaurant({ name, categories, image, reviews, delivery_time, delivery_
                     </div>
                     <div className='flex items-center'>
                         <span className='text-sm mr-4 inline-flex items-center'>
-                            <div className='w-4 h-4 mr-1 -mt-1'>
-                                <FontAwesomeIcon icon={faClock} />
+                            <div className='w-4 h-4 mr-2 -mt-1'>
+                                <IconClock stroke={2} size={17} />
                             </div>
-                            <span>{delivery_time}</span>
+                            <span>{delivery_time} min</span>
                         </span>
                         <span className='text-sm mr-4 inline-flex items-center'>
-                            <div className='w-4 h-4 mr-1 -mt-1'>
-                                <FontAwesomeIcon icon={faBicycle} className='flex-shrink-0' />
+                            <div className='w-4 h-4 mr-2 -mt-1'>
+                                <IconBike stroke={2} size={17} />
                             </div>
                             <span>€ {delivery_cost}</span>
                         </span>
                         <span className='text-sm inline-flex items-center'>
-                            <div className='w-4 h-4 mr-1 -mt-1'>
-                                <FontAwesomeIcon icon={faBicycle} className='flex-shrink-0' />
+                            <div className='w-4 h-4 mr-2 -mt-0.5'>
+                                <IconBasket stroke={2} size={17} />
                             </div>
                             <span>€ {minimum_order_cost}</span>
                         </span>

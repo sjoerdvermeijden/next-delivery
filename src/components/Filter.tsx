@@ -47,7 +47,7 @@ function Filter() {
     }
 
     return (
-        <div className='p-4 bg-gray-100 flex justify-center'>
+        <div className='p-4 flex justify-center shadow-lg'>
             <ul className='flex gap-10'>
                 {
                     filters?.map((item) => {

@@ -4,9 +4,9 @@ type Props = {}
 
 function Header({ }: Props) {
     return (
-        <div className='p-4 bg-red-500'>
+        <div className='p-4'>
             <Link href="/">
-                <h1 className='font-bold text-3xl text-gray-800'>BezorgApp</h1>
+                <h1 className='font-bold text-3xl text-red-500'>BezorgApp</h1>
             </Link>
         </div>
     )
