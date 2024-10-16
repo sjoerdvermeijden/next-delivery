@@ -14,6 +14,11 @@ import Wrap from '../components/Wrap'
 function Restaurants() {
     const [restaurantItems, setRestaurantItems] = useContext(RestaurantContext);
 
+    useEffect(() => {
+        console.log(restaurantItems)
+    }, [restaurantItems])
+
+
     return (
         <>
             <Wrap>
@@ -22,7 +27,7 @@ function Restaurants() {
                     <ul className='grid gap-5 items-start'>
 
                         {
-                            restaurantItems.length <= 0 ? (
+                            restaurantItems.length === 0 ? (
                                 restaurants.map((item) => {
                                     return <>
                                         <li key={item.id} className='group'>
