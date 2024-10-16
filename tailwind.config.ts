@@ -23,5 +23,8 @@ const config: Config = {
     }
   },
   plugins: [],
+  compilerOption: {
+    "target": "es2015",
+  }
 };
 export default config;

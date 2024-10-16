@@ -15,7 +15,6 @@ function Restaurants() {
     const [restaurantItems, setRestaurantItems] = useContext(RestaurantContext);
 
     useEffect(() => {
-        console.log(restaurantItems)
     }, [restaurantItems])
 
 

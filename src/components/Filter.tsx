@@ -1,8 +1,6 @@
 'use client'
 
-import React, { useContext, useEffect } from 'react'
-
-import { filters } from '../filters';
+import React, { useContext, useEffect, useState } from 'react'
 
 import { FilterContext } from '@/context/FilterContext';
 import { RestaurantContext } from '@/context/RestaurantContext';
@@ -22,19 +20,29 @@ function Filter() {
     const [filterItems, setFilterItems] = useContext(FilterContext);
     const [restaurantItems, setRestaurantItems] = useContext(RestaurantContext);
 
-    const toggleFilter = (e: React.MouseEvent<HTMLElement>, item: Filter) => {
-        const index = filterItems.indexOf(item.title);
+    const [filterArray, setFilterArray] = useState<string[]>([]);
+
+    useEffect(() => {
+        const newArray = restaurants.map((item) => {
+            return item.categories
+        })
+        const uniqArray = [...new Set(newArray.flat(1))];
+        setFilterArray([...uniqArray]);
+    }, [])
+
+    const toggleFilter = (e: React.MouseEvent<HTMLElement>, item: string) => {
+        const index = filterItems.indexOf(item);
         if (index !== -1) {
             let filterList = filterItems
             filterList.splice(index, 1);
             setFilterItems([...filterList])
 
-            const newArray = restaurantItems.filter((restaurant) => !restaurant.categories.includes(item.title))
+            const newArray = restaurantItems.filter((restaurant) => !restaurant.categories.includes(item))
             setRestaurantItems([...newArray]);
         } else {
-            const restaurantArray = restaurants.filter((restaurant) => restaurant.categories.includes(item.title))
+            const restaurantArray = restaurants.filter((restaurant) => restaurant.categories.includes(item))
             setRestaurantItems([...restaurantItems, ...restaurantArray]);
-            setFilterItems([...filterItems, item.title])
+            setFilterItems([...filterItems, item])
         }
     }
 
@@ -42,11 +50,11 @@ function Filter() {
         <div className='flex justify-center mt-8'>
             <ul className='flex gap-10'>
                 {
-                    filters?.map((item) => {
+                    filterArray.map((item) => {
                         return (
                             <li key={Math.random()} onClick={(e) => toggleFilter(e, item)} className='hover:cursor-pointer'>
-                                <div className={`w-20 h-10 ${filterItems.includes(item.title) ? 'bg-green-600' : 'bg-red-500'} rounded mb-1`}></div>
-                                <span className='text-sm'>{item?.title}</span>
+                                <div className={`w-20 h-10 ${filterItems.includes(item) ? 'bg-green-600' : 'bg-red-500'} rounded mb-1`}></div>
+                                <span className='text-sm'>{item}</span>
                             </li>
                         )
                     })
