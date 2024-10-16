@@ -23,6 +23,7 @@ function Restaurant({ name, categories, image, reviews, delivery_time, delivery_
                     <Image
                         src={image?.img}
                         sizes="150px"
+                        priority
                         fill
                         style={{
                             objectFit: 'cover',

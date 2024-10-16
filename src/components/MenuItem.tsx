@@ -54,6 +54,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
                     src={image.img}
                     alt="Picture of the author"
                     sizes="150px"
+                    priority
                     fill
                     style={{
                         objectFit: 'cover',
