@@ -29,8 +29,8 @@ function Filter() {
             filterList.splice(index, 1);
             setFilterItems([...filterList])
 
-            const restaurantArray = restaurantItems.filter((restaurant) => !restaurant.categories.includes(item.title))
-            setRestaurantItems([...restaurantArray]);
+            const newArray = restaurantItems.filter((restaurant) => !restaurant.categories.includes(item.title))
+            setRestaurantItems([...newArray]);
         } else {
             const restaurantArray = restaurants.filter((restaurant) => restaurant.categories.includes(item.title))
             setRestaurantItems([...restaurantItems, ...restaurantArray]);
