@@ -31,17 +31,8 @@ function Filter() {
 
 
         } else {
-
-            // const newArray = restaurants.map((restaurant) => {
-            //     if (restaurant.categories.includes(item.title)) {
-            //         return item;
-            //     } else {
-            //         return false;
-            //     }
-            // })
-
-            // setRestaurantItems([...restaurantItems, ...newArray]);
-
+            const restaurantArray = restaurants.filter((restaurant) => restaurant.categories.includes(item.title))
+            setRestaurantItems([...restaurantItems, ...restaurantArray]);
             setFilterItems([...filterItems, item.title])
         }
     }
