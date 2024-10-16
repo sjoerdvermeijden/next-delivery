@@ -20,7 +20,7 @@ function Header({ }: Props) {
 
 
     return (
-        <div className='p-4 shadow-lg overflow-visible'>
+        <header className='p-4 shadow-lg overflow-visible relative z-10'>
             <Link href="/">
                 <h1 className='font-bold text-3xl text-red-500'>BezorgApp</h1>
             </Link>
@@ -28,7 +28,7 @@ function Header({ }: Props) {
                 ? ('')
                 : (<Filter />)
             }
-        </div>
+        </header>
     )
 }
 
