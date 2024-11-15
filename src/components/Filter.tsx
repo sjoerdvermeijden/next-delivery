@@ -30,17 +30,21 @@ function Filter() {
         setFilterArray([...uniqArray]);
     }, [])
 
-    const toggleFilter = (e: React.MouseEvent<HTMLElement>, item: string) => {
+    const toggleFilter = (item: string) => {
         const index = filterItems.indexOf(item);
         if (index !== -1) {
-            let filterList = filterItems
-            filterList.splice(index, 1);
-            setFilterItems([...filterList])
+            // Check if item exists in array and remove if so
+            filterItems.splice(index, 1);
+            setFilterItems([...filterItems])
 
+            // Create new restaurant array if categories don't contain item
             const newArray = restaurantItems.filter((restaurant) => !restaurant.categories.includes(item))
             setRestaurantItems([...newArray]);
         } else {
+            // Create new restaurant array of items that contain category 
             const restaurantArray = restaurants.filter((restaurant) => restaurant.categories.includes(item))
+
+            // Set new restaurant and filter arrays containing item
             setRestaurantItems([...restaurantItems, ...restaurantArray]);
             setFilterItems([...filterItems, item])
         }
@@ -52,7 +56,7 @@ function Filter() {
                 {
                     filterArray.map((item) => {
                         return (
-                            <li key={Math.random()} onClick={(e) => toggleFilter(e, item)} className='hover:cursor-pointer'>
+                            <li key={Math.random()} onClick={(e) => toggleFilter(item)} className='hover:cursor-pointer'>
                                 <div className={`w-20 h-10 ${filterItems.includes(item) ? 'bg-green-600' : 'bg-red-500'} rounded mb-1`}></div>
                                 <span className='text-sm'>{item}</span>
                             </li>
