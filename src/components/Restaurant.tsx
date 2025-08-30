@@ -33,7 +33,7 @@ function Restaurant({ name, categories, image, reviews, delivery_time, delivery_
                         alt="Picture of the author"
                     />
                 </figure>
-                <div className='p-5 grow group-hover:bg-gray-200 transition-colors'>
+                <div className='p-5 grow transition-colors'>
                     <h3 className='font-bold mb-2 text-xl'>{name}</h3>
                     <div className='flex mb-2'>
                         <div className='text-sm flex items-center font-bold mr-3'>

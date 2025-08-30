@@ -23,7 +23,7 @@ function Restaurants() {
             <Wrap>
                 <div className='py-20'>
                     <h3 className='font-bold mb-4 text-2xl'>Bestel bij 4 locaties</h3>
-                    <ul className='grid gap-5 items-start'>
+                    <ul className='grid gap-2 items-start'>
 
                         {
                             restaurantItems.length === 0 ? (

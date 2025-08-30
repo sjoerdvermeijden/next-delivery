@@ -29,7 +29,7 @@ function RestaurantPage() {
         <>
             <div className="container mb-11 lg:mb-0 mx-auto py-10 px-4">
                 <h1 className='font-bold mb-6 text-2xl'>{restaurant?.name}</h1>
-                <ul className='grid gap-5'>
+                <ul className='grid gap-2'>
                     {
                         restaurant?.menu.map((item) => {
                             return <li key={item.id} className='flex'>
