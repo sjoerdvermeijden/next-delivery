@@ -18,8 +18,8 @@ function Restaurant({ name, categories, image, reviews, delivery_time, delivery_
 
     return (
         <>
-            <div className='flex rounded-l-md shadow-md'>
-                <figure className='hidden lg:block rounded-l-md' style={{ position: 'relative', width: '200px', minHeight: '120px' }}>
+            <div className='flex rounded-l-md shadow-[0px_2px_6px_2px_rgba(0,0,0,.06)] rounded-2xl'>
+                <figure className='hidden lg:block rounded-l-md' style={{ position: 'relative', width: '290px', minHeight: '145px' }}>
                     <Image
                         src={image?.img}
                         sizes="150px"
@@ -27,13 +27,13 @@ function Restaurant({ name, categories, image, reviews, delivery_time, delivery_
                         fill
                         style={{
                             objectFit: 'cover',
-                            borderTopLeftRadius: '6px',
-                            borderBottomLeftRadius: '6px'
+                            borderTopLeftRadius: '12px',
+                            borderBottomLeftRadius: '12px'
                         }}
                         alt="Picture of the author"
                     />
                 </figure>
-                <div className='p-5 bg-gray-100 grow group-hover:bg-gray-200 transition-colors rounded-r-md'>
+                <div className='p-5 grow group-hover:bg-gray-200 transition-colors'>
                     <h3 className='font-bold mb-2 text-xl'>{name}</h3>
                     <div className='flex mb-2'>
                         <div className='text-sm flex items-center font-bold mr-3'>

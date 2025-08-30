@@ -69,7 +69,7 @@ function Cart({ }: Props) {
                     {
                         cartItems.map((item) => {
                             return (
-                                <li className="py-4 border-b border-gray-300" key={item?.id}>
+                                <li className="py-4 border-b border-gray-300" key={item.id}>
                                     <div className="flex flex-col items-end">
                                         <div className="w-full">
                                             <div className="flex">
