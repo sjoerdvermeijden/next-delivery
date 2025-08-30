@@ -48,8 +48,8 @@ function MenuItem({ id, title, description, price, image }: Props) {
     }
 
     return (
-        <div className='bg-gray-100 relative flex grow rounded-l-md'>
-            <figure className='hidden lg:block rounded-l-md' style={{ position: 'relative', width: '200px', minHeight: '120px' }}>
+        <div className='relative flex grow rounded-xl shadow-[0px_2px_6px_2px_rgba(0,0,0,.06)]'>
+            <figure className='hidden lg:block rounded-l-3xl' style={{ position: 'relative', width: '200px', minHeight: '120px' }}>
                 <Image
                     src={image.img}
                     alt="Picture of the author"
@@ -58,16 +58,16 @@ function MenuItem({ id, title, description, price, image }: Props) {
                     fill
                     style={{
                         objectFit: 'cover',
-                        borderTopLeftRadius: '6px',
-                        borderBottomLeftRadius: '6px'
+                        borderTopLeftRadius: '12px',
+                        borderBottomLeftRadius: '12px'
                     }}
                 />
             </figure>
-            <div className='flex flex-col p-4 rounded-r-md'>
+            <div className='flex flex-col p-4'>
                 <h1 className='text-xl mb-2 font-bold'>{title}</h1>
                 <p className='font-bold text-sm mb-2'>€{price}</p>
                 <p className='font-light text-sm'>{description}</p>
-                <button className="bg-gray-400  absolute right-0 top-0 text-white py-2 px-4 hover:bg-gray-600 hover:text-white rounded-tr-md rounded-bl-md transition-colors" onClick={(e) => orderButton(e, id)}>
+                <button className="bg-gray-400  absolute right-0 top-0 text-white py-2 px-4 hover:bg-gray-600 hover:text-white transition-colors" onClick={(e) => orderButton(e, id)}>
                     +
                 </button>
             </div>

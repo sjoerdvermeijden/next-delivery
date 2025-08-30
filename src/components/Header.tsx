@@ -20,14 +20,14 @@ function Header({ }: Props) {
             {pathname?.includes('/restaurants')
                 ? (
                     <div className='flex items-center'>
-                        <button onClick={(e) => router.back()}><IconChevronLeft stroke={2} size={18} color="red" className='mr-2' /></button>
+                        <button onClick={(e) => router.back()}><IconChevronLeft stroke={2} size={18} color="orange" className='mr-2' /></button>
                         <Link href="/">
-                            <h1 className='font-bold text-3xl text-red-500'>BezorgApp</h1>
+                            <h1 className='font-bold text-3xl text-orange-400'>BezorgApp</h1>
                         </Link>
                     </div>
                 )
                 : (<Link href="/">
-                    <h1 className='font-bold text-3xl text-red-500'>BezorgApp</h1>
+                    <h1 className='font-bold text-3xl text-orange-400'>BezorgApp</h1>
                 </Link>)
             }
 
