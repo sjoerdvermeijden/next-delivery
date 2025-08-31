@@ -1,5 +1,7 @@
 import React, { useState, useContext } from 'react'
 
+import { IconBasket } from '@tabler/icons-react';
+
 import { CartContext } from '@/context/CartContext'
 import { TotalContext } from '@/context/TotalContext'
 
@@ -58,7 +60,7 @@ function Cart({ }: Props) {
             <div className={`${responsiveState ? 'bottom-0' : 'h-full top-0'} fixed bg-white left-0 w-full lg:relative lg:w-80 lg:h-auto  shadow-lg p-5 z-0`}>
                 <div className='sticky top-8 left-8'>
                     <div className={`${responsiveState ? 'hidden' : 'mb-5 block'} justify-center items-center flex lg:block`}>
-                        <h3 className='text-2xl text-center mr-auto lg:mr-0'>Winkelmandje</h3>
+                        <h3 className='text-2xl font-extrabold text-center mr-auto lg:mr-0'>Winkelmandje</h3>
                         <button type="button" className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 lg:hidden" onClick={(e) => cartView(e)}>
                             <span className="sr-only">Close menu</span>
                             <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -70,7 +72,13 @@ function Cart({ }: Props) {
                     {
                         (cartItems.length <= 0) ?
                             <>
-                                <p>Lorem ipsum dolor sit.</p>
+                                <div className='flex flex-col items-center pt-10'>
+                                    <div className='mb-4'>
+                                        <IconBasket stroke={2} size={44} />
+                                    </div>
+                                    <h3 className='text-2xl font-extrabold text-center mb-2 mr-auto lg:mr-0'>Vul je mandje</h3>
+                                    <p>Je winkelmandje is nog leeg</p>
+                                </div>
                             </>
                             :
                             <>
