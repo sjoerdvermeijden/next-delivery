@@ -32,7 +32,7 @@ function RestaurantPage() {
                 <ul className='grid gap-2'>
                     {
                         restaurant?.menu.map((item) => {
-                            return <li key={item.id} className='flex'>
+                            return <li key={item.id} className='flex grow'>
                                 <MenuItem {...item} />
                             </li>
                         })

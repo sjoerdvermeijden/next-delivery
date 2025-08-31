@@ -4,6 +4,15 @@ import Image from 'next/image'
 import { CartContext } from '@/context/CartContext'
 import { TotalContext } from '@/context/TotalContext'
 
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
+
 type Props = {
     id: number,
     title: string,
@@ -48,29 +57,54 @@ function MenuItem({ id, title, description, price, image }: Props) {
     }
 
     return (
-        <div className='relative flex grow rounded-xl shadow-[0px_2px_6px_2px_rgba(0,0,0,.06)] p-4 hover:bg-gray-100 cursor-pointer'>
-            <div className='flex flex-col mr-auto'>
-                <h1 className='text-xl mb-2 font-bold'>{title}</h1>
-                <p className='font-bold text-sm mb-2'>€{price}</p>
-                <p className='font-light text-sm'>{description}</p>
-                <button className="absolute p-4 w-[20px] h-[20px] bg-white top-2 right-2 flex items-center justify-center rounded-[50%] text-orange-400 text-2xl border z-10" onClick={(e) => orderButton(e, id)}>
-                    +
-                </button>
-            </div>
-            <div className='rounded-l-3xl' style={{ position: 'relative', width: '119px', height: '119px', minHeight: '119px' }}>
-                <Image
-                    src={image.img}
-                    alt="Picture of the author"
-                    sizes="150px"
-                    priority
-                    fill
-                    style={{
-                        objectFit: 'cover',
-                        borderRadius: '8px',
-                    }}
-                />
-            </div>
-        </div>
+        <Dialog>
+            <DialogTrigger className="w-full">
+                <div className='relative flex grow rounded-xl shadow-[0px_2px_6px_2px_rgba(0,0,0,.06)] p-4 hover:bg-gray-100 cursor-pointer'>
+                    <div className='flex flex-col items-start mr-auto'>
+                        <h1 className='text-xl mb-2 font-bold'>{title}</h1>
+                        <p className='font-bold text-sm mb-2'>€{price}</p>
+                        <p className='font-light text-sm'>{description}</p>
+                        <button className="absolute p-4 w-[20px] h-[20px] bg-white top-2 right-2 flex items-center justify-center rounded-[50%] text-orange-400 text-2xl border z-10" onClick={(e) => orderButton(e, id)}>
+                            +
+                        </button>
+                    </div>
+                    <div className='rounded-l-3xl' style={{ position: 'relative', width: '119px', height: '119px', minHeight: '119px' }}>
+                        <Image
+                            src={image.img}
+                            alt="Picture of the author"
+                            sizes="150px"
+                            priority
+                            fill
+                            style={{
+                                objectFit: 'cover',
+                                borderRadius: '8px',
+                            }}
+                        />
+                    </div>
+                </div>
+            </DialogTrigger>
+            <DialogContent className='bg-white -mt-20 border-0 p-5 rounded-2xl w-[455px] max-w-[455px]'>
+                <DialogHeader>
+                    <Image
+                        priority
+                        src={image.img}
+                        width={410}
+                        height={417}
+                        style={{ objectFit: "cover", height: '417px', width: '100%', borderRadius: '8px', marginBottom: '10px' }}
+                        quality={80}
+                        alt="Picture of the author"
+                    />
+                    <DialogTitle className='text-xl mb-2 font-bold'>{title}</DialogTitle>
+                    <DialogDescription>
+                        <div className='flex flex-col mb-8'>
+                            <h3 className='mb-2 font-extrabold text-md'>€ {price}</h3>
+                            <p>{description}</p>
+                        </div>
+                        <div className='flex text-lg font-bold bg-orange-400 px-4 text-white p-2 rounded-3xl w-[50%] hover:cursor-pointer'><span className='inline-block mr-auto'>Toevoegen</span> <span className='text-right'>€ {price}</span></div>
+                    </DialogDescription>
+                </DialogHeader>
+            </DialogContent>
+        </Dialog>
     )
 }
 
