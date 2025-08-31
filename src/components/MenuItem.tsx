@@ -97,7 +97,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
                     />
                     <DialogTitle className='text-xl mb-2 font-bold'>{title}</DialogTitle>
                     <DialogDescription>
-                        <div className='flex flex-col mb-8'>
+                        <div className='flex flex-col mb-8 text-black'>
                             <h3 className='mb-2 font-extrabold text-md'>€ {price}</h3>
                             <p>{description}</p>
                         </div>
