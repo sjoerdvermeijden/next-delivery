@@ -52,7 +52,7 @@ function Header({ }: Props) {
                                 <DialogDescription>
                                     <div className='flex'>
                                         <DialogClose asChild>
-                                            <Link href="/account" className='text-center mr-2 text-lg font-bold bg-gray-100 p-2 rounded-3xl w-[50%]'>Inloggen</Link>
+                                            <Link href="/account" className='text-center mr-2 text-lg text-black font-bold bg-gray-100 p-2 rounded-3xl w-[50%]'>Inloggen</Link>
                                         </DialogClose>
                                         <DialogClose asChild>
                                             <Link href="/create-account" className='text-center text-lg font-bold bg-orange-400 text-white p-2 rounded-3xl w-[50%]'>Registreren</Link>
