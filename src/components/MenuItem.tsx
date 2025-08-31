@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import Image from 'next/image'
 
 import { CartContext } from '@/context/CartContext'
@@ -30,6 +30,8 @@ function MenuItem({ id, title, description, price, image }: Props) {
     const [cartItems, setCartItems] = useContext(CartContext);
     const { total, setTotal } = useContext(TotalContext);
 
+    const [open, setOpen] = React.useState(false)
+
     const orderButton = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, id: number) => {
         e.preventDefault();
 
@@ -55,37 +57,12 @@ function MenuItem({ id, title, description, price, image }: Props) {
 
             setCartItems(cartArray);
         }
-    }
 
-    const dialogCartButton = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, id: number) => {
-        e.preventDefault();
-
-        const idArray = cartItems.map((item) => item.id);
-
-        if (!idArray.includes(id)) {
-            setCartItems([...cartItems, { id, title, description, price, image, count: 1 }])
-
-            setTotal(total + price)
-        }
-
-        if (idArray.includes(id)) {
-
-            const cartArray = cartItems.map((item) => {
-                if (item.id === id) {
-                    item.count++;
-                    setTotal(total + item.price)
-                    return item;
-                } else {
-                    return item;
-                }
-            })
-
-            setCartItems(cartArray);
-        }
+        setOpen(false);
     }
 
     return (
-        <Dialog>
+        <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger className="w-full">
                 <div className='relative flex grow rounded-xl shadow-[0px_2px_6px_2px_rgba(0,0,0,.06)] p-4 hover:bg-gray-100 cursor-pointer'>
                     <div className='flex flex-col items-start mr-auto'>
@@ -134,7 +111,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
                                 <div className='mx-4 text-2xl text-black bg-gray-100'>0</div>
                                 <div className='w-12 h-12 flex items-center justify-center text-3xl text-black font-light rounded-[50%] bg-gray-100 hover:bg-gray-200 cursor-pointer'>+</div>
                             </div>
-                            <div className='flex items-center grow text-lg font-bold bg-orange-400 px-4 text-white p-2 rounded-3xl hover:cursor-pointer' onClick={(e) => dialogCartButton(e, id)}><span className='inline-block mr-auto'>Toevoegen</span> <span className='text-right'>€ {price}</span></div>
+                            <button type="button" className='flex items-center grow text-lg font-bold bg-orange-400 px-4 text-white p-2 rounded-3xl hover:cursor-pointer' onClick={(e) => orderButton(e, id)}><span className='inline-block mr-auto'>Toevoegen</span> <span className='text-right'>€ {price}</span></button>
                         </div>
                     </DialogDescription>
                 </DialogHeader>
