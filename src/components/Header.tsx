@@ -64,12 +64,6 @@ function Header({ }: Props) {
                     </Dialog>
                 </div>
             </div>
-
-            {
-                pathname?.includes('/restaurants')
-                    ? ('')
-                    : (<Filter />)
-            }
         </header >
     )
 }
