@@ -11,6 +11,7 @@ import {
     DialogHeader,
     DialogTitle,
     DialogTrigger,
+    DialogClose
 } from "@/components/ui/dialog"
 
 type Props = {
@@ -29,7 +30,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
     const [cartItems, setCartItems] = useContext(CartContext);
     const { total, setTotal } = useContext(TotalContext);
 
-    const orderButton = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, id: number) => {
+    const orderButton = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, id: number) => {
         e.preventDefault();
 
         const idArray = cartItems.map((item) => item.id);
@@ -64,7 +65,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
                         <h1 className='text-xl mb-2 font-bold'>{title}</h1>
                         <p className='font-bold text-sm mb-2'>€{price}</p>
                         <p className='font-light text-sm'>{description}</p>
-                        <button className="absolute p-4 w-[20px] h-[20px] bg-white top-2 right-2 flex items-center justify-center rounded-[50%] text-orange-400 text-2xl border z-10" onClick={(e) => orderButton(e, id)}>
+                        <button className="absolute p-4 w-[20px] h-[20px] bg-white top-2 right-2 flex items-center justify-center rounded-[50%] text-orange-400 text-2xl border z-10">
                             +
                         </button>
                     </div>
@@ -100,7 +101,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
                             <h3 className='mb-2 font-extrabold text-md'>€ {price}</h3>
                             <p>{description}</p>
                         </div>
-                        <div className='flex text-lg font-bold bg-orange-400 px-4 text-white p-2 rounded-3xl w-[50%] hover:cursor-pointer'><span className='inline-block mr-auto'>Toevoegen</span> <span className='text-right'>€ {price}</span></div>
+                        <div className='flex text-lg font-bold bg-orange-400 px-4 text-white p-2 rounded-3xl w-[50%] hover:cursor-pointer' onClick={(e) => orderButton(e, id)}><span className='inline-block mr-auto'>Toevoegen</span> <span className='text-right'>€ {price}</span></div>
                     </DialogDescription>
                 </DialogHeader>
             </DialogContent>
