@@ -30,7 +30,34 @@ function MenuItem({ id, title, description, price, image }: Props) {
     const [cartItems, setCartItems] = useContext(CartContext);
     const { total, setTotal } = useContext(TotalContext);
 
-    const orderButton = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, id: number) => {
+    const orderButton = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, id: number) => {
+        e.preventDefault();
+
+        const idArray = cartItems.map((item) => item.id);
+
+        if (!idArray.includes(id)) {
+            setCartItems([...cartItems, { id, title, description, price, image, count: 1 }])
+
+            setTotal(total + price)
+        }
+
+        if (idArray.includes(id)) {
+
+            const cartArray = cartItems.map((item) => {
+                if (item.id === id) {
+                    item.count++;
+                    setTotal(total + item.price)
+                    return item;
+                } else {
+                    return item;
+                }
+            })
+
+            setCartItems(cartArray);
+        }
+    }
+
+    const dialogCartButton = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, id: number) => {
         e.preventDefault();
 
         const idArray = cartItems.map((item) => item.id);
@@ -65,7 +92,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
                         <h1 className='text-xl mb-2 font-bold'>{title}</h1>
                         <p className='font-bold text-sm mb-2'>€{price}</p>
                         <p className='font-light text-sm'>{description}</p>
-                        <button className="absolute p-4 w-[20px] h-[20px] bg-white top-2 right-2 flex items-center justify-center rounded-[50%] text-orange-400 text-2xl border z-10">
+                        <button className="absolute p-4 w-[20px] h-[20px] bg-white top-2 right-2 flex items-center justify-center rounded-[50%] text-orange-400 text-2xl border z-10" onClick={(e) => orderButton(e, id)}>
                             +
                         </button>
                     </div>
@@ -107,7 +134,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
                                 <div className='mx-4 text-2xl text-black bg-gray-100'>0</div>
                                 <div className='w-12 h-12 flex items-center justify-center text-3xl text-black font-light rounded-[50%] bg-gray-100 hover:bg-gray-200 cursor-pointer '>+</div>
                             </div>
-                            <div className='flex grow text-lg font-bold bg-orange-400 px-4 text-white p-2 rounded-3xl w-[50%] hover:cursor-pointer' onClick={(e) => orderButton(e, id)}><span className='inline-block mr-auto'>Toevoegen</span> <span className='text-right'>€ {price}</span></div>
+                            <div className='flex grow text-lg font-bold bg-orange-400 px-4 text-white p-2 rounded-3xl w-[50%] hover:cursor-pointer' onClick={(e) => dialogCartButton(e, id)}><span className='inline-block mr-auto'>Toevoegen</span> <span className='text-right'>€ {price}</span></div>
                         </div>
                     </DialogDescription>
                 </DialogHeader>
