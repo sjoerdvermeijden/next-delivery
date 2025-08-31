@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from 'react'
 
+import Image from 'next/image'
+
 import { useParams } from 'next/navigation'
 
 import { restaurants } from '../../../data'
@@ -27,17 +29,31 @@ function RestaurantPage() {
 
     return (
         <>
-            <div className="container mb-11 lg:mb-0 mx-auto py-10 px-4">
-                <h1 className='font-bold mb-6 text-2xl'>{restaurant?.name}</h1>
-                <ul className='grid gap-2'>
-                    {
-                        restaurant?.menu.map((item) => {
-                            return <li key={item.id} className='flex grow'>
-                                <MenuItem {...item} />
-                            </li>
-                        })
-                    }
-                </ul>
+            <div className='flex flex-col w-full'>
+                {
+                    restaurant &&
+                    <Image
+                        priority
+                        src={restaurant.image.img}
+                        width={410}
+                        height={480}
+                        style={{ objectFit: "cover", height: '480px', width: '100%', marginBottom: '10px' }}
+                        quality={80}
+                        alt="Picture of the author"
+                    />
+                }
+                <div className="container mb-11 lg:mb-0 mx-auto py-10 px-4">
+                    <h1 className='font-bold mb-6 text-2xl'>{restaurant?.name}</h1>
+                    <ul className='grid gap-2'>
+                        {
+                            restaurant?.menu.map((item) => {
+                                return <li key={item.id} className='flex grow'>
+                                    <MenuItem {...item} />
+                                </li>
+                            })
+                        }
+                    </ul>
+                </div>
             </div>
             <Cart />
         </>
