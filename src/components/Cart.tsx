@@ -57,7 +57,7 @@ function Cart({ }: Props) {
 
     return (
         <>
-            <div className={`${responsiveState ? 'bottom-0' : 'h-full top-0'} fixed bg-white left-0 w-full lg:relative lg:w-80 lg:h-auto  shadow-lg p-5 z-0`}>
+            <div className={`relative ${responsiveState ? 'bottom-0' : 'h-full top-0'}  bg-white left-0 w-full h-full lg:relative lg:w-80 lg:h-auto  shadow-lg p-5 z-0`}>
                 <div className='sticky top-8 left-8'>
                     <div className={`${responsiveState ? 'hidden' : 'mb-5 block'} justify-center items-center flex lg:block`}>
                         <h3 className='text-2xl font-extrabold text-center mr-auto lg:mr-0'>Winkelmandje</h3>
@@ -105,8 +105,10 @@ function Cart({ }: Props) {
                                         })
                                     }
                                 </ul>
-                                <p className='mb-3 font-bold'>Totaal: €{Math.abs(total).toFixed(2)}</p>
-                                <button className="block w-full text-center text-lg font-bold bg-orange-400 text-white p-2 rounded-3xl" onClick={(e) => orderButton(e)}>Bestellen (€{Math.abs(total).toFixed(2)})</button>
+                                <div>
+                                    <p className='mb-3 font-bold'>Totaal: €{Math.abs(total).toFixed(2)}</p>
+                                    <button className="block w-full text-center text-lg font-bold bg-orange-400 text-white p-2 rounded-3xl" onClick={(e) => orderButton(e)}>Bestellen (€{Math.abs(total).toFixed(2)})</button>
+                                </div>
                             </>
                     }
                 </div>

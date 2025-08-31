@@ -1,9 +1,10 @@
 import Restaurants from '../components/Restaurants'
-import Filter from '../components/Filter'
+import RestaurantFilters from '../components/Filters'
 
 export default function Home() {
   return (
-    <div className='container mx-auto'>
+    <div className='flex w-[1280px] py-8 mx-auto'>
+      <RestaurantFilters />
       <Restaurants />
     </div>
   );
