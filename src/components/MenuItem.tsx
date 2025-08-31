@@ -101,7 +101,14 @@ function MenuItem({ id, title, description, price, image }: Props) {
                             <h3 className='mb-2 font-extrabold text-md'>€ {price}</h3>
                             <p>{description}</p>
                         </div>
-                        <div className='flex text-lg font-bold bg-orange-400 px-4 text-white p-2 rounded-3xl w-[50%] hover:cursor-pointer' onClick={(e) => orderButton(e, id)}><span className='inline-block mr-auto'>Toevoegen</span> <span className='text-right'>€ {price}</span></div>
+                        <div className='flex'>
+                            <div className='flex items-center rounded-3xl mr-2 bg-gray-100'>
+                                <div className='w-12 h-12 flex items-center justify-center text-3xl text-black font-light rounded-[50%] bg-gray-100 hover:bg-gray-200 cursor-pointer '>-</div>
+                                <div className='mx-4 text-3xl bg-gray-100'>0</div>
+                                <div className='w-12 h-12 flex items-center justify-center text-3xl text-black font-light rounded-[50%] bg-gray-100 hover:bg-gray-200 cursor-pointer '>+</div>
+                            </div>
+                            <div className='flex grow text-lg font-bold bg-orange-400 px-4 text-white p-2 rounded-3xl w-[50%] hover:cursor-pointer' onClick={(e) => orderButton(e, id)}><span className='inline-block mr-auto'>Toevoegen</span> <span className='text-right'>€ {price}</span></div>
+                        </div>
                     </DialogDescription>
                 </DialogHeader>
             </DialogContent>
