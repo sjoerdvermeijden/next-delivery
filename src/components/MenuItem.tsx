@@ -38,7 +38,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
       setMealCounter(1);
     }, [open])
 
-    const orderButton = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, id: number) => {
+    const orderButton = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, id: number) => {
         e.preventDefault();
 
         const idArray = cartItems.map((item) => item.id);
