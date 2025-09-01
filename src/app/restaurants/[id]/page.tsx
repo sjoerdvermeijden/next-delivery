@@ -48,13 +48,13 @@ function RestaurantPage() {
                     <div className="container mb-11 lg:mb-0 mx-auto py-10 px-4">
                         <h1 className='font-bold mb-2 text-2xl'>{restaurant?.name}</h1>
                         <div className='flex items-center mb-6'>
-                            <span className='text-sm mr-4 inline-flex items-center'>
+                            <span className='text-sm mr-2 inline-flex items-center after:w-1 after:h-1 after:bg-black after:rounded-[50%] after:ml-2'>
                                 <div className='w-4 h-4 mr-2 -mt-1'>
                                     <IconClock stroke={2} size={17} />
                                 </div>
                                 <span>{restaurant.delivery_time} min</span>
                             </span>
-                            <span className='text-sm mr-4 inline-flex items-center'>
+                            <span className='text-sm mr-2 inline-flex items-center after:w-1 after:h-1 after:bg-black after:rounded-[50%] after:ml-2'>
                                 <div className='w-4 h-4 mr-2 -mt-0.5'>
                                     <IconBasket stroke={2} size={17} />
                                 </div>
