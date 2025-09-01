@@ -53,8 +53,8 @@ function MenuItem({ id, title, description, price, image }: Props) {
 
             const cartArray = cartItems.map((item) => {
                 if (item.id === id) {
-                    item.count++;
-                    setTotal(total + item.price)
+                    item.count = item.count + mealCounter;
+                    setTotal(total + item.price * mealCounter)
                     return item;
                 } else {
                     return item;
