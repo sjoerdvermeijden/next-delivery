@@ -35,7 +35,7 @@ function RestaurantPage() {
                         <Image
                             priority
                             src={restaurant.image.img}
-                            width={410}
+                            width={910}
                             height={480}
                             style={{ objectFit: "cover", height: '480px', width: '100%', marginBottom: '10px' }}
                             quality={100}

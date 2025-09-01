@@ -16,12 +16,12 @@ type Props = {}
 
 function RetaurantFilters({ }: Props) {
     return (
-        <div className='font-extrabold text-lg w-[312px] mr-6'>
+        <div className='hidden font-extrabold text-lg w-[312px] mr-6 lg:block'>
             <h3 className='mb-6'>4 partners</h3>
             <ul className='list-none'>
-                <li className='flex items-center mb-4'><span className='inline-block mr-auto'>Nu geopend</span><Switch className='bg-orange-400' /></li>
-                <li className='flex items-center mb-4'><span className='inline-block mr-auto'>Nieuw</span><Switch className='bg-orange-400' /></li>
-                <li className='flex items-center mb-4'><span className='inline-block mr-auto'>Gratis bezorging</span><Switch className='bg-orange-400' /></li>
+                <li className='flex items-center mb-4'><span className='inline-block mr-auto'>Nu geopend</span><Switch /></li>
+                <li className='flex items-center mb-4'><span className='inline-block mr-auto'>Nieuw</span><Switch /></li>
+                <li className='flex items-center mb-4'><span className='inline-block mr-auto'>Gratis bezorging</span><Switch /></li>
                 <li className='mb-4'>
                     <h3 className='mb-2'>Minimum bestelbedrag</h3>
                     <RadioGroup defaultValue="comfortable">
