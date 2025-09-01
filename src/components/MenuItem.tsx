@@ -38,14 +38,6 @@ function MenuItem({ id, title, description, price, image }: Props) {
       setMealCounter(0);
     }, [open])
 
-    const subtractCounter = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        if (mealCounter >= 1) {
-            setMealCounter(mealCounter => mealCounter - 1)
-        } else {
-            return false;
-        }
-    }
-
     const orderButton = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, id: number) => {
         e.preventDefault();
 
