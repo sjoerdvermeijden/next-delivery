@@ -19,7 +19,7 @@ function Restaurant({ name, categories, image, reviews, delivery_time, delivery_
     return (
         <>
             <div className='flex rounded-l-md shadow-[0px_2px_6px_2px_rgba(0,0,0,.06)] rounded-2xl'>
-                <figure className='block rounded-l-md' style={{ position: 'relative', width: '290px', minHeight: '145px' }}>
+                <figure className='hidden rounded-l-md sm:block' style={{ position: 'relative', width: '290px', minHeight: '145px' }}>
                     <Image
                         src={image?.img}
                         sizes="150px"
