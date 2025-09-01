@@ -57,7 +57,7 @@ function Cart({ }: Props) {
 
     return (
         <>
-            <div className={`relative ${responsiveState ? 'bottom-0' : 'h-full top-0'}  bg-white left-0 w-full h-full lg:relative lg:w-80 lg:h-auto  shadow-lg p-5 z-0`}>
+            <div className={`${responsiveState ? 'fixed bottom-0' : 'relative h-full top-0'}  bg-white left-0 w-full shadow-lg p-5 z-0 lg:relative lg:w-80 lg:h-auto`}>
                 <div className='sticky top-8 left-8'>
                     <div className={`${responsiveState ? 'hidden' : 'mb-5 block'} justify-center items-center flex lg:block`}>
                         <h3 className='text-2xl font-extrabold text-center mr-auto lg:mr-0'>Winkelmandje</h3>
