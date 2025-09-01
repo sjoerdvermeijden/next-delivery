@@ -35,15 +35,23 @@ function MenuItem({ id, title, description, price, image }: Props) {
     const [open, setOpen] = React.useState(false)
     let [mealCounter, setMealCounter] = useState<number>(0);
 
+    const subtractCounter = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        if (mealCounter >= 1) {
+            setMealCounter(mealCounter => mealCounter - 1)
+        } else {
+            return false;
+        }
+    }
+
     const orderButton = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, id: number) => {
         e.preventDefault();
 
         const idArray = cartItems.map((item) => item.id);
 
         if (!idArray.includes(id)) {
-            setCartItems([...cartItems, { id, title, description, price, image, count: 1 }])
+            setCartItems([...cartItems, { id, title, description, price, image, count: mealCounter }])
 
-            setTotal(total + price)
+            setTotal(total + price * mealCounter)
         }
 
         if (idArray.includes(id)) {
@@ -110,9 +118,9 @@ function MenuItem({ id, title, description, price, image }: Props) {
                         </div>
                         <div className='flex'>
                             <div className='flex items-center rounded-3xl mr-2 bg-gray-100'>
-                                <div className='w-12 h-12 flex items-center justify-center text-3xl text-black font-light rounded-[50%] bg-gray-100 hover:bg-gray-200 cursor-pointer' >-</div>
+                                <button className='w-12 h-12 flex items-center justify-center text-3xl text-black font-light rounded-[50%] bg-gray-100 hover:bg-gray-200 cursor-pointer'>-</button>
                                 <div className='mx-4 text-2xl text-black bg-gray-100'>{mealCounter}</div>
-                                <div className='w-12 h-12 flex items-center justify-center text-3xl text-black font-light rounded-[50%] bg-gray-100 hover:bg-gray-200 cursor-pointer' onClick={() => setMealCounter(mealCounter => mealCounter + 1)}>+</div>
+                                <button className='w-12 h-12 flex items-center justify-center text-3xl text-black font-light rounded-[50%] bg-gray-100 hover:bg-gray-200 cursor-pointer' onClick={() => setMealCounter(mealCounter => mealCounter + 1)}>+</button>
                             </div>
                             <button type="button" className='flex items-center grow text-lg font-bold bg-orange-400 px-4 text-white p-2 rounded-3xl hover:cursor-pointer' onClick={(e) => orderButton(e, id)}><span className='inline-block mr-auto'>Toevoegen</span> <span className='text-right'>€ {price}</span></button>
                         </div>
