@@ -49,7 +49,6 @@ function Header({ }: Props) {
                         <DialogContent className='bg-white -mt-80 border-0 rounded-2xl'>
                             <DialogHeader>
                                 <DialogTitle className='text-2xl font-extrabold mb-2'>Mijn account</DialogTitle>
-                                <DialogDescription>
                                     <div className='flex'>
                                         <DialogClose asChild>
                                             <Link href="/account" className='text-center mr-2 text-lg text-black font-bold bg-gray-100 p-2 rounded-3xl w-[50%]'>Inloggen</Link>
@@ -58,7 +57,6 @@ function Header({ }: Props) {
                                             <Link href="/create-account" className='text-center text-lg font-bold bg-orange-400 text-white p-2 rounded-3xl w-[50%]'>Registreren</Link>
                                         </DialogClose>
                                     </div>
-                                </DialogDescription>
                             </DialogHeader>
                         </DialogContent>
                     </Dialog>
