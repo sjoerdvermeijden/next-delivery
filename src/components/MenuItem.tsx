@@ -73,7 +73,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger className="w-full">
                 <div className='relative flex grow rounded-xl shadow-[0px_2px_6px_2px_rgba(0,0,0,.06)] p-4 hover:bg-gray-100 cursor-pointer'>
-                    <div className='flex flex-col items-start mr-auto'>
+                    <div className='flex flex-col items-start mr-auto text-left'>
                         <h1 className='text-xl mb-2 font-bold'>{title}</h1>
                         <p className='font-bold text-sm mb-2'>€{price}</p>
                         <p className='font-light text-sm'>{description}</p>
@@ -81,7 +81,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
                             +
                         </div>
                     </div>
-                    <div className='rounded-l-3xl' style={{ position: 'relative', width: '119px', height: '119px', minHeight: '119px' }}>
+                    <div className='hidden rounded-l-3xl md:block' style={{ position: 'relative', width: '119px', height: '119px', minHeight: '119px' }}>
                         <Image
                             src={image.img}
                             alt="Picture of the author"
