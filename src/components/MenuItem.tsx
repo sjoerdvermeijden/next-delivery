@@ -115,7 +115,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
                         <div className='flex'>
                             <div className='flex items-center rounded-3xl mr-2 bg-gray-100'>
                                 <button className='w-12 h-12 flex items-center justify-center text-3xl text-black font-light rounded-[50%] bg-gray-100 hover:bg-gray-200 cursor-pointer'>-</button>
-                                <div className='mx-4 text-2xl text-gray-900 bg-gray-100'>{mealCounter}</div>
+                                <div className='mx-4 text-2xl text-black bg-gray-100'>{mealCounter}</div>
                                 <button className='w-12 h-12 flex items-center justify-center text-3xl text-black font-light rounded-[50%] bg-gray-100 hover:bg-gray-200 cursor-pointer' onClick={() => setMealCounter(mealCounter => mealCounter + 1)}>+</button>
                             </div>
                             <div role="button" className='flex items-center grow text-lg font-bold bg-orange-400 px-4 text-white p-2 rounded-3xl hover:cursor-pointer' onClick={(e) => orderButton(e, id)}><span className='inline-block mr-auto'>Toevoegen</span> <span className='text-right'>€ {price}</span></div>
