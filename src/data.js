@@ -7,7 +7,7 @@ export const restaurants = [
         delivery_cost: 2.55,
         minimum_order_cost: '9,99',
         image : {
-            img: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
+            img: 'https://images.unsplash.com/photo-1626844131082-256783844137?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
             alt: 'Sjoerd'
         },
         menu: [
@@ -71,7 +71,7 @@ export const restaurants = [
         delivery_cost: 2.55,
         minimum_order_cost: '9,99',
         image : {
-            img: 'https://images.unsplash.com/photo-1585703900468-13c7a978ad86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+            img: 'https://plus.unsplash.com/premium_photo-1683657860968-7474e7ea2d80?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
             alt: 'Sjoerd'
         },
         menu: [
@@ -140,7 +140,7 @@ export const restaurants = [
         delivery_cost: 2.55,
         minimum_order_cost: '9,99',
         image : {
-            img: 'https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80',
+            img: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1998&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
             alt: 'Sjoerd'
         },
         menu: [
@@ -204,7 +204,7 @@ export const restaurants = [
         delivery_cost: 2.55,
         minimum_order_cost: '9,99',
         image : {
-            img: 'https://images.unsplash.com/photo-1615584240522-7fe7ed4dadee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80',
+            img: 'https://images.unsplash.com/photo-1543362426-39c5b9067c0f?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
             alt: 'Sjoerd'
         },
         menu: [
