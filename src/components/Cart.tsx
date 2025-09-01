@@ -89,14 +89,14 @@ function Cart({ }: Props) {
                                                 <li className="py-4 border-b border-gray-300" key={item.id}>
                                                     <div className="flex flex-col items-end">
                                                         <div className="w-full">
-                                                            <div className="flex">
-                                                                <p className="mr-1">({item.count})</p>
-                                                                <p className="mb-3 mr-auto">{item.title}</p>
-                                                                <p className="font-bold">€{(item.price * item.count).toFixed(2)}</p>
+                                                            <div className="flex items-center mb-3">
+                                                                <p className="font-bold mr-auto underline text-sm">{item.title}</p>
+                                                                <p>€{(item.price * item.count).toFixed(2)}</p>
                                                             </div>
                                                         </div>
-                                                        <div>
+                                                        <div className='flex'>
                                                             <button className='px-2 bg-gray-500 text-white font-light rounded mr-1' onClick={(e) => subtractItem(e, item.id)}>-</button>
+                                                            <div className="mr-1">{item.count}</div>
                                                             <button className='px-2 bg-gray-500 text-white font-light rounded' onClick={(e) => addItem(e, item.id)}>+</button>
                                                         </div>
                                                     </div>

@@ -13,7 +13,6 @@ import {
     DialogHeader,
     DialogTitle,
     DialogTrigger,
-    DialogClose
 } from "@/components/ui/dialog"
 
 type Props = {
@@ -33,7 +32,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
     const { total, setTotal } = useContext(TotalContext);
 
     const [open, setOpen] = React.useState(false)
-    let [mealCounter, setMealCounter] = useState<number>(0);
+    let [mealCounter, setMealCounter] = useState<number>(1);
 
     useEffect(() => {
       setMealCounter(0);
@@ -58,7 +57,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
             setTotal(total + price * mealCounter)
         }
 
-        if (idArray.includes(id)) {
+        if (idArray.includes(id) && mealCounter > 0) {
 
             const cartArray = cartItems.map((item) => {
                 if (item.id === id) {
@@ -71,6 +70,8 @@ function MenuItem({ id, title, description, price, image }: Props) {
             })
 
             setCartItems(cartArray);
+        } else {
+            setOpen(false);
         }
 
         setOpen(false);
