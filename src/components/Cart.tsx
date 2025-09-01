@@ -59,7 +59,7 @@ function Cart({ }: Props) {
         <>
             {
                 cartItems.length <= 0 &&
-                    responsiveState ? <></>
+                    !responsiveState ? <></>
                     :         
                     <div className={`${responsiveState ? 'fixed bottom-0' : 'fixed h-full top-0'}  bg-white left-0 w-full shadow-[2px_4px_8px_4px_rgba(0,0,0,.06)] p-5 z-10 lg:relative lg:w-80 lg:h-auto`}>
                         <div className='sticky top-8 left-8'>
@@ -76,15 +76,15 @@ function Cart({ }: Props) {
                             {
                                 (cartItems.length <= 0) ?
                                     responsiveState ?
-                                        <></>
-                                        :
-                                        <div className='flex flex-col items-center pt-10'>
+                                        <div className='hidden pt-10 lg:flex flex-col items-center'>
                                             <div className='mb-4'>
                                                 <IconBasket stroke={2} size={44} />
                                             </div>
                                             <h3 className='text-2xl font-extrabold text-center mb-2 lg:mr-0'>Vul je mandje</h3>
                                             <p>Je winkelmandje is nog leeg</p>
                                         </div>
+                                        :
+                                        <></>
                                     :
                                     <>
                                         <ul className={`${responsiveState ? 'hidden' : 'block'} lg:block mb-4`}>
