@@ -35,7 +35,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
     let [mealCounter, setMealCounter] = useState<number>(1);
 
     useEffect(() => {
-      setMealCounter(0);
+      setMealCounter(1);
     }, [open])
 
     const orderButton = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, id: number) => {
