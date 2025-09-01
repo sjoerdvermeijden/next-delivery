@@ -26,23 +26,19 @@ function Restaurants() {
                     {
                         restaurantItems.length === 0 ? (
                             restaurants.map((item) => {
-                                return <>
-                                    <li key={item.id} className='group'>
-                                        <Link href={`/restaurants/${item.id}`}>
-                                            <Restaurant {...item} />
-                                        </Link>
-                                    </li>
-                                </>
+                                return <li key={item.id} className='group'>
+                                    <Link href={`/restaurants/${item.id}`}>
+                                        <Restaurant {...item} />
+                                    </Link>
+                                </li>
                             }
                             )) : (
                             restaurantItems.map((item) => {
-                                return <>
-                                    <li key={item.id} className='group'>
-                                        <Link href={`/restaurants/${item.id}`}>
-                                            <Restaurant {...item} />
-                                        </Link>
-                                    </li>
-                                </>
+                                return  <li key={item.id} className='group'>
+                                    <Link href={`/restaurants/${item.id}`}>
+                                        <Restaurant {...item} />
+                                    </Link>
+                                </li>
                             })
                         )
                     }
