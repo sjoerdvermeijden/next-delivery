@@ -77,9 +77,9 @@ function MenuItem({ id, title, description, price, image }: Props) {
                         <h1 className='text-xl mb-2 font-bold'>{title}</h1>
                         <p className='font-bold text-sm mb-2'>€{price}</p>
                         <p className='font-light text-sm'>{description}</p>
-                        <button className="absolute p-4 w-[20px] h-[20px] bg-white top-2 right-2 flex items-center justify-center rounded-[50%] text-orange-400 text-2xl border z-10" onClick={(e) => orderButton(e, id)}>
+                        <div role="button" className="absolute p-4 w-[20px] h-[20px] bg-white top-2 right-2 flex items-center justify-center rounded-[50%] text-orange-400 text-2xl border z-10" onClick={(e) => orderButton(e, id)}>
                             +
-                        </button>
+                        </div>
                     </div>
                     <div className='rounded-l-3xl' style={{ position: 'relative', width: '119px', height: '119px', minHeight: '119px' }}>
                         <Image
@@ -108,7 +108,6 @@ function MenuItem({ id, title, description, price, image }: Props) {
                         alt="Picture of the author"
                     />
                     <DialogTitle className='text-xl mb-2 font-bold'>{title}</DialogTitle>
-                    <DialogDescription>
                         <div className='flex flex-col mb-8 text-black'>
                             <h3 className='mb-2 font-extrabold text-md'>€ {price}</h3>
                             <p>{description}</p>
@@ -121,7 +120,6 @@ function MenuItem({ id, title, description, price, image }: Props) {
                             </div>
                             <button type="button" className='flex items-center grow text-lg font-bold bg-orange-400 px-4 text-white p-2 rounded-3xl hover:cursor-pointer' onClick={(e) => orderButton(e, id)}><span className='inline-block mr-auto'>Toevoegen</span> <span className='text-right'>€ {price}</span></button>
                         </div>
-                    </DialogDescription>
                 </DialogHeader>
             </DialogContent>
         </Dialog>
