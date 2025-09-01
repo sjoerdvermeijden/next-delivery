@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import Image from 'next/image'
 
 import { CartContext } from '@/context/CartContext'
@@ -34,6 +34,10 @@ function MenuItem({ id, title, description, price, image }: Props) {
 
     const [open, setOpen] = React.useState(false)
     let [mealCounter, setMealCounter] = useState<number>(0);
+
+    useEffect(() => {
+      setMealCounter(0);
+    }, [open])
 
     const subtractCounter = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         if (mealCounter >= 1) {
