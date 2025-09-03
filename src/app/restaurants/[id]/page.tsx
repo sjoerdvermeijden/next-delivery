@@ -29,20 +29,22 @@ function RestaurantPage() {
     return (
         <>
             <div className='flex flex-col w-full'>
-                {
-                    restaurant &&
-                    <>
-                        <Image
-                            priority
-                            src={restaurant.image.img}
-                            width={910}
-                            height={480}
-                            style={{ objectFit: "cover", height: '480px', width: '100%', marginBottom: '10px' }}
-                            quality={100}
-                            alt="Picture of the author"
-                        />
-                    </>
-                }
+                <div className='relative h-[200px] lg:h-[480px] overflow-hidden'>
+                    {
+                        restaurant &&
+                        <>
+                            <Image
+                                priority
+                                src={restaurant.image.img}
+                                width={910}
+                                height={200}
+                                style={{ position: 'absolute', top: '0px', right: '0px', bottom: '0px', left: '0px', objectFit: "cover", width: '100%' }}
+                                quality={100}
+                                alt="Picture of the author"
+                            />
+                        </>
+                    }
+                </div>
                 {
                     restaurant &&
                     <div className="container mb-11 lg:mb-0 mx-auto py-10 px-4">
