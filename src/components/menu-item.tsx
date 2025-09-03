@@ -112,13 +112,15 @@ function MenuItem({ id, title, description, price, image }: Props) {
                             <h3 className='mb-2 font-extrabold text-md'>€ {price}</h3>
                             <p>{description}</p>
                         </div>
-                        <div className='flex'>
-                            <div className='flex items-center rounded-3xl mr-2 bg-gray-100'>
-                                <button className='w-12 h-12 flex items-center justify-center text-3xl text-black font-light rounded-[50%] bg-gray-100 hover:bg-gray-200 cursor-pointer'>-</button>
-                                <div className='mx-4 text-2xl text-black bg-gray-100'>{mealCounter}</div>
-                                <button className='w-12 h-12 flex items-center justify-center text-3xl text-black font-light rounded-[50%] bg-gray-100 hover:bg-gray-200 cursor-pointer' onClick={() => setMealCounter(mealCounter => mealCounter + 1)}>+</button>
+                        <div className="absolute bottom-0 left-0 w-full p-5 bg-white shadow-[2px_4px_8px_4px_rgba(0,0,0,.06)]">
+                            <div className='flex'>
+                                <div className='flex items-center rounded-3xl mr-2 bg-gray-100'>
+                                    <button className='w-12 h-12 flex items-center justify-center text-3xl text-black font-light rounded-[50%] bg-gray-100 hover:bg-gray-200 cursor-pointer'>-</button>
+                                    <div className='mx-4 text-2xl text-black bg-gray-100'>{mealCounter}</div>
+                                    <button className='w-12 h-12 flex items-center justify-center text-3xl text-black font-light rounded-[50%] bg-gray-100 hover:bg-gray-200 cursor-pointer' onClick={() => setMealCounter(mealCounter => mealCounter + 1)}>+</button>
+                                </div>
+                                <div role="button" className='flex items-center grow text-lg font-bold bg-orange-500 px-4 text-white p-2 rounded-3xl hover:cursor-pointer' onClick={(e) => orderButton(e, id)}><span className='inline-block mr-auto'>Toevoegen</span> <span className='text-right'>€ {price}</span></div>
                             </div>
-                            <div role="button" className='flex items-center grow text-lg font-bold bg-orange-500 px-4 text-white p-2 rounded-3xl hover:cursor-pointer' onClick={(e) => orderButton(e, id)}><span className='inline-block mr-auto'>Toevoegen</span> <span className='text-right'>€ {price}</span></div>
                         </div>
                 </DialogHeader>
             </DialogContent>
