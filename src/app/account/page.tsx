@@ -8,7 +8,7 @@ type Props = {}
 
 function AccountPage({ }: Props) {
     return (
-        <div className='py-14 bg-gray-100'>
+        <div className='lg:py-14 bg-gray-100'>
             <Wrap>
                 <FormContainer>
                     <LoginForm />

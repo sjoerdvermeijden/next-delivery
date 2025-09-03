@@ -6,7 +6,7 @@ type Props = {}
 
 function CreateAccountPage({ }: Props) {
     return (
-        <div className='py-14 bg-gray-100'>
+        <div className='lg:py-14 bg-gray-100'>
             <FormContainer>
                 <RegisterForm />
             </FormContainer>
