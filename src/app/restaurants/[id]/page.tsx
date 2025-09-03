@@ -12,7 +12,7 @@ import { restaurants } from '../../../data'
 
 import { RestaurantType } from '../../../types/restaurant'
 
-import Cart from '../../../components/cart'
+import Cart from '@/components/cart';
 
 import MenuItem from '../../../components/menu-item'
 
