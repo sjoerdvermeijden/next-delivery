@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Wrap from '@/components/Wrap'
+import Wrap from '@/components/wrap'
 import FormContainer from '@/components/form-container'
-import LoginForm from '@/components/LoginForm'
+import LoginForm from '@/components/login-form'
 
 type Props = {}
 

@@ -14,7 +14,7 @@ import { RestaurantType } from '@/types/Restaurant'
 
 import Cart from '../../../components/Cart'
 
-import MenuItem from '../../../components/MenuItem'
+import MenuItem from '../../../components/menu-item'
 
 function RestaurantPage() {
     const params = useParams()

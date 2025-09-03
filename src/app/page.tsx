@@ -1,5 +1,5 @@
-import Restaurants from '../components/Restaurants'
-import RestaurantFilters from '../components/Filters'
+import Restaurants from '../components/restaurants'
+import RestaurantFilters from '../components/filters'
 
 export default function Home() {
   return (

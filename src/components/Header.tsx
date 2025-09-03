@@ -17,8 +17,6 @@ import {
     DialogClose
 } from "@/components/ui/dialog"
 
-import Filter from './Filter'
-
 type Props = {}
 
 function Header({ }: Props) {
