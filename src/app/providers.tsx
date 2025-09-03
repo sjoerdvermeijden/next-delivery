@@ -2,10 +2,10 @@
 
 import React from 'react'
 
-import { TotalComponent } from '@/context/TotalContext'
-import { CartComponent } from '@/context/CartContext'
-import { FilterComponent } from '@/context/FilterContext'
-import { RestaurantComponent } from '@/context/RestaurantContext'
+import { TotalComponent } from '@/context/total-context'
+import { CartComponent } from '@/context/cart-context'
+import { FilterComponent } from '@/context/filter-context'
+import { RestaurantComponent } from '@/context/restaurant-context'
 
 type Props = {
     children: React.ReactNode

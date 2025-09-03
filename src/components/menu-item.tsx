@@ -3,8 +3,8 @@
 import React, { useContext, useState, useEffect } from 'react'
 import Image from 'next/image'
 
-import { CartContext } from '@/context/CartContext'
-import { TotalContext } from '@/context/TotalContext'
+import { CartContext } from '@/context/cart-context'
+import { TotalContext } from '@/context/total-context'
 
 import {
     Dialog,

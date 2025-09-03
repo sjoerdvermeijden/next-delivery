@@ -2,8 +2,8 @@
 
 import React, { useContext, useEffect, useState } from 'react'
 
-import { FilterContext } from '@/context/FilterContext';
-import { RestaurantContext } from '@/context/RestaurantContext';
+import { FilterContext } from '@/context/filter-context';
+import { RestaurantContext } from '@/context/restaurant-context';
 
 import { restaurants } from '@/data';
 

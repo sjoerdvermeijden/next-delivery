@@ -2,8 +2,8 @@ import React, { useState, useContext } from 'react'
 
 import { IconBasket } from '@tabler/icons-react';
 
-import { CartContext } from '@/context/CartContext'
-import { TotalContext } from '@/context/TotalContext'
+import { CartContext } from '@/context/cart-context'
+import { TotalContext } from '@/context/total-context'
 
 type Props = {}
 

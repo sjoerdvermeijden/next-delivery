@@ -4,11 +4,11 @@ import React, { useContext, useEffect } from 'react'
 
 import Link from 'next/link'
 
-import { RestaurantContext } from '@/context/RestaurantContext'
+import { RestaurantContext } from '@/context/restaurant-context'
 
 import { restaurants } from '../data'
 
-import Restaurant from '../components/Restaurant'
+import Restaurant from './restaurant'
 
 function Restaurants() {
     const [restaurantItems, setRestaurantItems] = useContext(RestaurantContext);

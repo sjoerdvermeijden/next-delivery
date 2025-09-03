@@ -1,5 +1,5 @@
 import React from 'react'
-import FormContainer from '@/components/FormContainer'
+import FormContainer from '@/components/form-container'
 import RegisterForm from '@/components/register-form'
 
 type Props = {}
