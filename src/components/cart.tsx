@@ -67,7 +67,7 @@ function Cart({ }: Props) {
                 cartItems.length <= 0 &&
                     !responsiveState ? <></>
                     :         
-                    <div className={`${responsiveState ? 'fixed bottom-0' : 'fixed h-full top-0'}  bg-white left-0 w-full shadow-[2px_4px_8px_4px_rgba(0,0,0,.06)] p-5 z-20 lg:relative lg:w-80 lg:h-auto`}>
+                    <div className={`${responsiveState ? 'fixed bottom-0' : 'fixed h-full top-0'}  bg-white left-0 w-full z-20 shadow-[2px_4px_8px_4px_rgba(0,0,0,.06)] p-5 lg:z-10 lg:relative lg:w-80 lg:h-auto`}>
                         <div className='sticky top-8 left-8'>
                             <div className={`${responsiveState ? 'hidden' : 'mb-5 block'} justify-center items-center flex lg:block`}>
                                 <h3 className='text-2xl font-extrabold text-center mr-auto lg:mr-0'>Winkelmandje</h3>

@@ -98,16 +98,17 @@ function MenuItem({ id, title, description, price, image }: Props) {
             </DialogTrigger>
             <DialogContent className='fixed top-0 right-0 bottom-0 left-0 w-full translate-y-0 translate-x-0 bg-white border-0 p-5 lg:-mt-20 lg:top-[50%] lg:right-[50%] lg:left-[50%] lg:bottom-[auto] lg:-translate-y-[50%] lg:-translate-x-[50%] lg:rounded-2xl lg:w-[455px] lg:max-w-[455px]'>
                 <DialogHeader>
-                    <Image
-                        priority
-                        src={image.img}
-                        width={410}
-                        height={417}
-                        style={{ objectFit: "cover", height: '417px', width: '100%', borderRadius: '8px', marginBottom: '10px' }}
-                        quality={80}
-                        alt="Picture of the author"
-                    />
-                    <DialogTitle className='text-xl mb-2 font-bold'>{title}</DialogTitle>
+                    <div className='mb-20 overlow-y-scroll'>
+                        <Image
+                            priority
+                            src={image.img}
+                            width={410}
+                            height={417}
+                            style={{ objectFit: "cover", height: '417px', width: '100%', borderRadius: '8px', marginBottom: '10px' }}
+                            quality={80}
+                            alt="Picture of the author"
+                        />
+                        <DialogTitle className='text-xl mb-2 font-bold'>{title}</DialogTitle>
                         <div className='flex flex-col mb-6 text-black'>
                             <h3 className='mb-2 font-extrabold text-md'>€ {price}</h3>
                             <p>{description}</p>
@@ -122,6 +123,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
                                 <div role="button" className='flex items-center grow text-lg font-bold bg-orange-500 px-4 text-white p-2 rounded-3xl hover:cursor-pointer' onClick={(e) => orderButton(e, id)}><span className='inline-block mr-auto'>Toevoegen</span> <span className='text-right'>€ {price}</span></div>
                             </div>
                         </div>
+                    </div>
                 </DialogHeader>
             </DialogContent>
         </Dialog>
