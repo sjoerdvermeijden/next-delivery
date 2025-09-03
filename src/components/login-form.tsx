@@ -34,9 +34,9 @@ function LoginForm({ }: Props) {
                 <p className='flex justify-center w-full before:content-[attr(after)] before:ml-2 before:h-[0.1px] before:bg-gray-200 before:z-10 before:w-[165px] before:absolute before:left-0 before:top-2.5 after:content-[attr(after)] after:ml-2 after:h-[0.1px] after:bg-gray-200 after:z-10 after:w-[165px] after:absolute after:right-0 after:top-2.5 text-gray-600 font-light text-sm'>Of</p>
             </div>
             <form action="" className='flex flex-col mb-4'>
-                <label htmlFor="email" className='mb-1 text-sm'>Email</label>
+                <label htmlFor="email" className='mb-1 text-xs font-bold'>Email</label>
                 <input className='mb-2 border border-gray-700 p-2 rounded-xl' type="email" name="" id="email" />
-                <label htmlFor="wachtwoord" className='mb-1 text-sm'>Wachtwoord</label>
+                <label htmlFor="wachtwoord" className='mb-1 text-xs font-bold'>Wachtwoord</label>
                 <input className='mb-4 border border-gray-700 p-2 rounded-xl' type="password" name="" id="wachtwoord" />
                 <input className='bg-orange-500 p-2 text-white font-bold rounded-3xl' type="submit" value="Log in" />
             </form>

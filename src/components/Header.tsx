@@ -26,7 +26,7 @@ function Header({ }: Props) {
     const router = useRouter()
 
     return (
-        <header className='p-4 shadow-lg overflow-visible relative z-10'>
+        <header className='p-4 shadow-lg overflow-visible relative z-20'>
             <div className='flex items-center'>
                 {pathname?.includes('/restaurants')
                     ? (
