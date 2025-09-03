@@ -112,7 +112,7 @@ function Cart({ }: Props) {
                                         </ul>
                                         <div>
                                             <p className='mb-3 font-bold'>Totaal: €{Math.abs(total).toFixed(2)}</p>
-                                            <button className="block w-full text-center text-lg font-bold bg-orange-400 text-white p-2 rounded-3xl" onClick={(e) => orderButton(e)}>Bestellen (€{Math.abs(total).toFixed(2)})</button>
+                                            <button className="block w-full text-center text-lg font-bold bg-orange-500 text-white p-2 rounded-3xl" onClick={(e) => orderButton(e)}>Bestellen (€{Math.abs(total).toFixed(2)})</button>
                                         </div>
                                     </>
                             }

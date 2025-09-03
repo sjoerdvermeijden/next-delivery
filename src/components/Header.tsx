@@ -31,12 +31,12 @@ function Header({ }: Props) {
                         <div className='flex items-center mr-auto'>
                             <button onClick={(e) => router.back()}><IconChevronLeft stroke={2} size={18} color="orange" className='mr-2' /></button>
                             <Link href="/">
-                                <h1 className='font-bold text-3xl text-orange-400'>BezorgApp</h1>
+                                <h1 className='font-bold text-3xl text-orange-500'>BezorgApp</h1>
                             </Link>
                         </div>
                     )
                     : (<Link href="/" className='mr-auto'>
-                        <h1 className='font-bold text-3xl text-orange-400'>BezorgApp</h1>
+                        <h1 className='font-bold text-3xl text-orange-500'>BezorgApp</h1>
                     </Link>)
                 }
                 <div className='w-10 h-10 rounded-[50%] flex items-center justify-center transition-colors hover:bg-gray-100 cursor-pointer'>
@@ -52,7 +52,7 @@ function Header({ }: Props) {
                                             <Link href="/account" className='text-center mr-2 text-lg text-black font-bold bg-gray-100 p-2 rounded-3xl w-[50%]'>Inloggen</Link>
                                         </DialogClose>
                                         <DialogClose asChild>
-                                            <Link href="/create-account" className='text-center text-lg font-bold bg-orange-400 text-white p-2 rounded-3xl w-[50%]'>Registreren</Link>
+                                            <Link href="/create-account" className='text-center text-lg font-bold bg-orange-500 text-white p-2 rounded-3xl w-[50%]'>Registreren</Link>
                                         </DialogClose>
                                     </div>
                             </DialogHeader>

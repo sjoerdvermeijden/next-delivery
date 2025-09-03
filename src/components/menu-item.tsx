@@ -77,7 +77,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
                         <h1 className='text-xl mb-2 font-bold'>{title}</h1>
                         <p className='font-bold text-sm mb-2'>€{price}</p>
                         <p className='font-light text-sm'>{description}</p>
-                        <div role="button" className="absolute p-4 w-[20px] h-[20px] bg-white top-2 right-2 flex items-center justify-center rounded-[50%] text-orange-400 text-2xl border z-10" onClick={(e) => orderButton(e, id)}>
+                        <div role="button" className="absolute p-4 w-[20px] h-[20px] bg-white top-2 right-2 flex items-center justify-center rounded-[50%] text-orange-500 text-2xl border z-10" onClick={(e) => orderButton(e, id)}>
                             +
                         </div>
                     </div>
@@ -118,7 +118,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
                                 <div className='mx-4 text-2xl text-black bg-gray-100'>{mealCounter}</div>
                                 <button className='w-12 h-12 flex items-center justify-center text-3xl text-black font-light rounded-[50%] bg-gray-100 hover:bg-gray-200 cursor-pointer' onClick={() => setMealCounter(mealCounter => mealCounter + 1)}>+</button>
                             </div>
-                            <div role="button" className='flex items-center grow text-lg font-bold bg-orange-400 px-4 text-white p-2 rounded-3xl hover:cursor-pointer' onClick={(e) => orderButton(e, id)}><span className='inline-block mr-auto'>Toevoegen</span> <span className='text-right'>€ {price}</span></div>
+                            <div role="button" className='flex items-center grow text-lg font-bold bg-orange-500 px-4 text-white p-2 rounded-3xl hover:cursor-pointer' onClick={(e) => orderButton(e, id)}><span className='inline-block mr-auto'>Toevoegen</span> <span className='text-right'>€ {price}</span></div>
                         </div>
                 </DialogHeader>
             </DialogContent>
