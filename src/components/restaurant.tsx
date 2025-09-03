@@ -31,8 +31,8 @@ function Restaurant({ name, categories, image, reviews, delivery_time, delivery_
                         alt="Picture of the author"
                     />
                 </figure>
-                <div className='p-5 grow transition-colors'>
-                    <h3 className='font-bold mb-2 text-xl'>{name}</h3>
+                <div className='flex flex-col items-start justify-center pt-4 pr-4 pb-4 pl-5 grow transition-colors'>
+                    <h3 className='font-bold mb-2 text-lg'>{name}</h3>
                     <div className='flex mb-2'>
                         <div className='text-sm flex items-center font-bold mr-3'>
                             <div className='w-4 h-4 mr-1'>
