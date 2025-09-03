@@ -19,7 +19,7 @@ function Restaurants() {
 
     return (
         <>
-            <div className='xl:w-[890px]'>
+            <div className='w-full xl:w-[890px]'>
                 <h3 className='font-bold mb-4 text-2xl'>Bestel bij 4 locaties</h3>
                 <ul className='grid gap-2 items-start'>
 
