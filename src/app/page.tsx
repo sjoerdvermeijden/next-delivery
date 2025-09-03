@@ -1,4 +1,4 @@
-import Restaurants from '../components/restaurants'
+import Restaurants from '@/components/restaurants';
 import RestaurantFilters from '../components/filters'
 
 export default function Home() {

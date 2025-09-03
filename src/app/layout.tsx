@@ -4,8 +4,8 @@ import "./globals.css";
 
 import Providers from './providers';
 
-import Header from '@/components/header'
-import Footer from '@/components/footer'
+import Header from '@/components/header';
+import Footer from '@/components/footer';
 
 const inter = Inter({ subsets: ["latin"] });
 
