@@ -27,8 +27,10 @@ function RegisterForm({ }: Props) {
                     Doorgaan met Facebook
                 </Button>
             </div>
-            <div className='relative mb-4'>
-                <p className='flex justify-center w-full before:content-[attr(after)] before:ml-2 before:h-[0.1px] before:bg-gray-200 before:z-10 before:w-[165px] before:absolute before:left-0 before:top-2.5 after:content-[attr(after)] after:ml-2 after:h-[0.1px] after:bg-gray-200 after:z-10 after:w-[165px] after:absolute after:right-0 after:top-2.5 text-gray-600 font-light text-sm'>Of</p>
+            <div className='flex items-center mb-4'>
+                <span className='inline-flex w-full grow h-1.5 border-t border-t-gray-200 mt-1 mr-4'></span>
+                <p className='flex justify-center text-gray-600 font-light text-sm mr-4'>Of</p>
+                <span className='inline-flex w-full h-1.5 border-t border-t-gray-200 mt-1'></span>
             </div>
             <form action="" className='flex flex-col mb-4'>
                 <label htmlFor="name" className='mb-1 text-xs font-bold'>Naam</label>

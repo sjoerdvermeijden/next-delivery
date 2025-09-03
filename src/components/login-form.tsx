@@ -27,8 +27,10 @@ function LoginForm({ }: Props) {
                     Doorgaan met Facebook
                 </Button>
             </div>
-            <div className='relative mb-4'>
-                <p className='flex justify-center w-full before:content-[attr(after)] before:ml-2 before:h-[0.1px] before:bg-gray-200 before:z-10 before:w-[165px] before:absolute before:left-0 before:top-2.5 after:content-[attr(after)] after:ml-2 after:h-[0.1px] after:bg-gray-200 after:z-10 after:w-[165px] after:absolute after:right-0 after:top-2.5 text-gray-600 font-light text-sm'>Of</p>
+            <div className='flex items-center mb-4'>
+                <span className='inline-flex w-full grow h-1.5 border-t border-t-gray-200 mt-1 mr-4'></span>
+                <p className='flex flex-shrink-0 text-gray-600 font-light text-sm mr-4'>Of</p>
+                <span className='inline-flex w-full h-1.5 border-t border-t-gray-200 mt-1'></span>
             </div>
             <form action="" className='flex flex-col mb-4'>
                 <label htmlFor="email" className='mb-1 text-xs font-bold'>Email</label>
@@ -37,8 +39,10 @@ function LoginForm({ }: Props) {
                 <input className='mb-4 border border-gray-700 p-2 rounded-xl' type="password" name="" id="wachtwoord" />
                 <input className='bg-orange-500 p-2 text-white font-bold rounded-3xl' type="submit" value="Log in" />
             </form>
-            <div className='relative mb-4'>
-                <p className='flex justify-center w-full before:content-[attr(after)] before:ml-2 before:h-[0.1px] before:bg-gray-200 before:z-10 before:w-[95px] before:absolute before:left-0 before:top-2.5 after:content-[attr(after)] after:ml-2 after:h-[0.1px] after:bg-gray-200 after:z-10 after:w-[95px] after:absolute after:right-0 after:top-2.5 text-gray-600 font-light text-sm'>Nog niet geregistreerd?</p>
+            <div className='flex items-center mb-4'>
+                <span className='inline-flex w-full grow h-1.5 border-t border-t-gray-200 mt-1 mr-4'></span>
+                <p className='flex flex-shrink-0 text-gray-600 font-light text-sm mr-4'>Nog niet geregistreerd?</p>
+                <span className='inline-flex w-full h-1.5 border-t border-t-gray-200 mt-1'></span>
             </div>
             <Link href="/create-account" className='border border-gray-400 text-black p-2 text-center font-bold rounded-3xl transition-colors block hover:bg-gray-100'>Account aanmaken</Link>
         </>
