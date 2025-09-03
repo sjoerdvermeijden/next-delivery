@@ -1,5 +1,7 @@
 import React, { useState, useContext } from 'react'
 
+import Link from 'next/link';
+
 import { IconBasket } from '@tabler/icons-react';
 
 import { CartContext } from '@/context/cart-context'
@@ -112,7 +114,7 @@ function Cart({ }: Props) {
                                         </ul>
                                         <div>
                                             <p className='mb-3 font-bold'>Totaal: €{Math.abs(total).toFixed(2)}</p>
-                                            <button className="block w-full text-center text-lg font-bold bg-orange-500 text-white p-2 rounded-3xl" onClick={(e) => orderButton(e)}>Bestellen (€{Math.abs(total).toFixed(2)})</button>
+                                            <Link href="/account" className="block w-full text-center text-lg font-bold bg-orange-500 text-white p-2 rounded-3xl">Bestellen (€{Math.abs(total).toFixed(2)})</Link>
                                         </div>
                                     </>
                             }
