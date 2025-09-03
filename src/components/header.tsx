@@ -44,7 +44,7 @@ function Header({ }: Props) {
                         <DialogTrigger>
                             <IconMenu2 stroke={2} />
                         </DialogTrigger>
-                        <DialogContent className='bg-white -mt-80 border-0 rounded-2xl'>
+                        <DialogContent className='fixed top-0 right-0 bottom-0 left-0 w-full translate-y-0 translate-x-0 bg-white border-0 p-5 lg:-mt-20 lg:top-[50%] lg:right-[50%] lg:left-[50%] lg:bottom-[auto] lg:-translate-y-[50%] lg:-translate-x-[50%] lg:rounded-2xl lg:w-[455px] lg:max-w-[455px]'>
                             <DialogHeader>
                                 <DialogTitle className='text-2xl font-extrabold mb-2'>Mijn account</DialogTitle>
                                     <div className='flex'>
