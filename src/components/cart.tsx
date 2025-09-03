@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useState, useContext } from 'react'
 
 import Link from 'next/link';
 
@@ -7,29 +7,17 @@ import { IconBasket } from '@tabler/icons-react';
 import { CartContext } from '@/context/cart-context'
 import { TotalContext } from '@/context/total-context'
 
-type Props = {}
+import useWindowWidth from "../utils/useWindowWidth";
 
-function getWindowWidth() {
-  const { innerWidth: width } = window;
-  return {
-    width
-  };
-}
+type Props = {}
 
 function Cart({ }: Props) {
     const [cartItems, setCartItems] = useContext(CartContext);
     const { total, setTotal } = useContext(TotalContext);
 
     const [responsiveState, setResponsiveState] = useState<Boolean>(true);
-    const [windowWidth, setWindowWidth] = useState<number>();
-    
-    useEffect(() => {
-        window.addEventListener('resize', () => {
-        const { innerWidth: width } = window;
 
-        setWindowWidth(innerWidth);
-    })
-    },[window])
+    const width = useWindowWidth();
 
     const cartView = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault();
@@ -131,8 +119,12 @@ function Cart({ }: Props) {
                                         <div>
                                             <p className='mb-3 font-bold'>Totaal: €{Math.abs(total).toFixed(2)}</p>
                                             {
-                                                windowWidth < 1024 ?
-                                                <button className="block w-full text-center text-lg font-bold bg-orange-500 text-white p-2 rounded-3xl" onClick={(e) => orderButton(e)}>Zie winkelmandje (€{Math.abs(total).toFixed(2)})</button>
+                                                width < 1024 ?
+
+                                                    responsiveState ?
+                                                        <button className="block w-full text-center text-lg font-bold bg-orange-500 text-white p-2 rounded-3xl" onClick={(e) => orderButton(e)}>Zie winkelmandje (€{Math.abs(total).toFixed(2)})</button>
+                                                        :
+                                                        <Link href="/account" className="block w-full text-center text-lg font-bold bg-orange-500 text-white p-2 rounded-3xl">Bestellen (€{Math.abs(total).toFixed(2)})</Link>
                                                 :
                                                 <Link href="/account" className="block w-full text-center text-lg font-bold bg-orange-500 text-white p-2 rounded-3xl">Bestellen (€{Math.abs(total).toFixed(2)})</Link>
                                             }
