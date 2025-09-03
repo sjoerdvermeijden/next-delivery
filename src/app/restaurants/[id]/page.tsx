@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 
-import { IconClock, IconBike, IconBasket, IconStarFilled } from '@tabler/icons-react';
+import { IconClock, IconBike, IconBasket } from '@tabler/icons-react';
 
 import Image from 'next/image'
 
@@ -10,9 +10,9 @@ import { useParams } from 'next/navigation'
 
 import { restaurants } from '../../../data'
 
-import { RestaurantType } from '../../../types/Restaurant'
+import { RestaurantType } from '../../../types/restaurant'
 
-import Cart from '../../../components/Cart'
+import Cart from '../../../components/cart'
 
 import MenuItem from '../../../components/menu-item'
 
