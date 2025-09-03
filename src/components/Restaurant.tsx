@@ -4,7 +4,7 @@ import { IconClock, IconBike, IconBasket, IconStarFilled } from '@tabler/icons-r
 
 import Image from 'next/image'
 
-import { RestaurantType } from '@/types/Restaurant'
+import { RestaurantType } from '@/types/restaurant'
 
 function Restaurant({ name, categories, image, reviews, delivery_time, delivery_cost, minimum_order_cost }: RestaurantType) {
 

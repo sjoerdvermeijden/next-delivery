@@ -5,7 +5,7 @@ import React, {
     useState,
 } from "react";
 
-import { RestaurantType } from '@/types/Restaurant';
+import { RestaurantType } from '@/types/restaurant';
 
 type Props = {
     children: React.ReactNode;

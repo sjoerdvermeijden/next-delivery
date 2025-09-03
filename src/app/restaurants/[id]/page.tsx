@@ -10,7 +10,7 @@ import { useParams } from 'next/navigation'
 
 import { restaurants } from '../../../data'
 
-import { RestaurantType } from '@/types/Restaurant'
+import { RestaurantType } from '../../../types/Restaurant'
 
 import Cart from '../../../components/Cart'
 
