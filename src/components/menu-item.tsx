@@ -96,7 +96,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
                     </div>
                 </div>
             </DialogTrigger>
-            <DialogContent className='bg-white -mt-20 border-0 p-5 rounded-2xl w-[455px] max-w-[455px]'>
+            <DialogContent className='fixed top-0 right-0 bottom-0 left-0 w-full translate-y-0 translate-x-0 bg-white border-0 p-5 lg:-mt-20 lg:top-[50%] lg:right-[50%] lg:left-[50%] lg:bottom-[auto] lg:-translate-y-[50%] lg:-translate-x-[50%] lg:rounded-2xl lg:w-[455px] lg:max-w-[455px]'>
                 <DialogHeader>
                     <Image
                         priority
