@@ -31,12 +31,12 @@ function Header({ }: Props) {
                         <div className='flex items-center mr-auto'>
                             <button onClick={(e) => router.back()}><IconChevronLeft stroke={2} size={18} color="#f97316" className='mr-2' /></button>
                             <Link href="/">
-                                <h1 className='font-bold text-3xl text-orange-500'>BezorgApp</h1>
+                                <h1 className='font-bold text-2xl text-orange-500'>BezorgApp</h1>
                             </Link>
                         </div>
                     )
                     : (<Link href="/" className='mr-auto'>
-                        <h1 className='font-bold text-3xl text-orange-500'>BezorgApp</h1>
+                        <h1 className='font-bold text-2xl text-orange-500'>BezorgApp</h1>
                     </Link>)
                 }
                 <div className='w-10 h-10 rounded-[50%] flex items-center justify-center transition-colors hover:bg-gray-100 cursor-pointer'>
