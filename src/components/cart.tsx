@@ -123,7 +123,7 @@ function Cart({ }: Props) {
                                                     responsiveState ?
                                                         <button className="flex justify-between w-full text-center text-lg font-semibold bg-orange-500 text-white px-4 py-2 rounded-3xl" onClick={(e) => orderButton(e)}>
                                                             <span className='relative'>
-                                                                <span className='absolute -top-1 -right-2 w-[16px] h-[16px] text-[10px] text-center rounded-[50%] bg-black text-white leading-[1.6]'>3</span>
+                                                                <span className='absolute -top-1 -right-2 w-[16px] h-[16px] text-[10px] text-center rounded-[50%] bg-black text-white leading-[1.6]'>{cartItems.length}</span>
                                                                 <IconBasket stroke={2} size={26} color="white" />
                                                             </span> 
                                                             <span className='inline-block'>Bekijk winkelmandje</span> 
