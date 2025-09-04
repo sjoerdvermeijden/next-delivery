@@ -18,7 +18,7 @@ function Restaurant({ name, categories, image, reviews, delivery_time, delivery_
 
     return (
         <>
-            <div className='flex flex-col overflow-hidden rounded-l-md shadow-[0px_2px_6px_2px_rgba(0,0,0,.06)] rounded-2xl lg:flex-row'>
+            <div className='flex flex-col overflow-hidden shadow-[0px_2px_6px_2px_rgba(0,0,0,.06)] rounded-2xl lg:flex-row'>
                 <figure className='relative min-h-[145px] lg:rounded-l-md lg:w-[290px]'>
                     <Image
                         src={image?.img}
