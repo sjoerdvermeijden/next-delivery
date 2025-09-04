@@ -2,7 +2,7 @@ type Props = {}
 
 function Footer({ }: Props) {
     return (
-        <div className='py-8 bg-gray-700 text-red'></div>
+        <div className='py-8 bg-stone-200 text-red'></div>
     )
 }
 
