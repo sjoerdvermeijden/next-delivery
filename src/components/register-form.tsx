@@ -34,11 +34,11 @@ function RegisterForm({ }: Props) {
             </div>
             <form action="" className='flex flex-col mb-6'>
                 <label htmlFor="name" className='mb-1.5 text-xs font-bold'>Naam</label>
-                <input className='mb-3 border p-2 rounded-xl' placeholder="Naam" type="text" name="" id="name" />
+                <input className='mb-3 border p-2 rounded-xl placeholder:text-sm' placeholder="Naam" type="text" name="" id="name" />
                 <label htmlFor="email" className='mb-1.5 text-xs font-bold'>E-mailadres</label>
-                <input className='mb-3 border p-2 rounded-xl' placeholder="Email" type="email" name="" id="email" />
+                <input className='mb-3 border p-2 rounded-xl placeholder:text-sm' placeholder="Email" type="email" name="" id="email" />
                 <label htmlFor="wachtwoord" className='mb-1.5 text-xs font-bold'>Wachtwoord</label>
-                <input className='mb-4 border p-2 rounded-xl' placeholder="Wachtwoord" type="password" name="" id="wachtwoord" />
+                <input className='mb-4 border p-2 rounded-xl placeholder:text-sm' placeholder="Wachtwoord" type="password" name="" id="wachtwoord" />
                 <input className='bg-orange-500 p-2 text-white font-bold rounded-3xl' type="submit" value="Registreren" />
             </form>
             <div className='flex justify-center text-xs'>

@@ -34,7 +34,7 @@ function LoginForm({ }: Props) {
             </div>
             <form action="" className='flex flex-col mb-4'>
                 <label htmlFor="email" className='mb-1.5 text-xs font-bold'>Doorgaan met e-mailadres</label>
-                <input className='mb-3 border border-gray-700 p-2 rounded-xl' placeholder="Doorgaan met email" type="email" name="" id="email" />
+                <input className='mb-3 border border-gray-700 p-2 rounded-xl placeholder:text-sm' placeholder="Doorgaan met email" type="email" name="" id="email" />
                 <input className='bg-orange-500 p-2 text-white font-semibold text-lg rounded-3xl' type="submit" value="Verificatiecode aanvragen" />
             </form>
             <div className='flex items-center mb-4'>
