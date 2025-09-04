@@ -29,25 +29,27 @@ function RestaurantPage() {
     return (
         <>
             <div className='flex flex-col w-full'>
-                <div className='relative h-[170px] md:h-[320px] lg:h-[480px] overflow-hidden'>
-                    {
-                        restaurant &&
-                        <>
-                            <Image
-                                priority
-                                src={restaurant.image.img}
-                                width={910}
-                                height={200}
-                                style={{ position: 'absolute', top: '0px', right: '0px', bottom: '0px', left: '0px', objectFit: "cover", width: '100%' }}
-                                quality={100}
-                                alt="Picture of the author"
-                            />
-                        </>
-                    }
+                <div className='pt-4 pr-4 pl-4 md:p-0'>
+                    <div className='relative h-[170px] rounded-2xl md:rounded-none md:h-[320px] lg:h-[480px] overflow-hidden'>
+                        {
+                            restaurant &&
+                            <>
+                                <Image
+                                    priority
+                                    src={restaurant.image.img}
+                                    width={910}
+                                    height={200}
+                                    style={{ position: 'absolute', top: '0px', right: '0px', bottom: '0px', left: '0px', objectFit: "cover", width: '100%' }}
+                                    quality={100}
+                                    alt="Picture of the author"
+                                />
+                            </>
+                        }
+                    </div>
                 </div>
                 {
                     restaurant &&
-                    <div className="container mx-auto mb-11 py-6 md:px-4 md:mb-0">
+                    <div className="container mx-auto mb-11 py-4 md:px-4 md:mb-0">
                         <div className='px-4 md:px-0'>
                             <h1 className='font-bold mb-2 text-2xl'>{restaurant?.name}</h1>
                             <div className='flex items-center mb-6'>
