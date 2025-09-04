@@ -73,15 +73,15 @@ function MenuItem({ id, title, description, price, image }: Props) {
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger className="w-full">
                 <div className='relative flex grow p-4 border-t border-gray-200 md:border-none md:rounded-xl md:shadow-[0px_2px_6px_2px_rgba(0,0,0,.06)] hover:bg-gray-100 cursor-pointer'>
-                    <div className='flex flex-col items-start mr-auto text-left'>
-                        <h1 className='text-xl mb-2 font-bold'>{title}</h1>
+                    <div className='flex flex-col items-start mr-auto text-left pr-4'>
+                        <h1 className='text-md mb-2 font-bold lg:text-xl'>{title}</h1>
                         <p className='font-bold text-sm mb-2'>€{price}</p>
                         <p className='font-light text-sm'>{description}</p>
-                        <div role="button" className="absolute p-4 w-[20px] h-[20px] bg-white top-2 right-2 flex items-center justify-center rounded-[50%] text-orange-500 text-2xl border z-10" onClick={(e) => orderButton(e, id)}>
+                        <div role="button" className="absolute p-4 w-[20px] h-[20px] bg-white top-2 right-5 lg:right-2 flex items-center justify-center rounded-[50%] text-orange-500 text-2xl border z-10" onClick={(e) => orderButton(e, id)}>
                             +
                         </div>
                     </div>
-                    <div className='flex shrink-0 rounded-l-3xl' style={{ position: 'relative', width: '119px', height: '119px', minHeight: '119px' }}>
+                    <div className='flex shrink-0 rounded-l-3xl' style={{ position: 'relative', width: '118px', height: '118px', minHeight: '118px' }}>
                         <Image
                             src={image.img}
                             alt="Picture of the author"
