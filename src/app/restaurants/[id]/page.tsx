@@ -40,7 +40,7 @@ function RestaurantPage() {
                                         src={restaurant.image.img}
                                         width={910}
                                         height={200}
-                                        style={{ objectFit: "cover", width: '100%' }}
+                                        style={{ objectFit: "cover", width: '100%', height: '100%' }}
                                         quality={100}
                                         alt="Picture of the author"
                                         />
