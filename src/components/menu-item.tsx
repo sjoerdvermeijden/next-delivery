@@ -81,7 +81,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
                             +
                         </div>
                     </div>
-                    <div className='flex shrink-0 rounded-l-3xl' style={{ position: 'relative', width: '118px', height: '118px', minHeight: '118px' }}>
+                    <div className='flex shrink-0 rounded-xl overflow-hidden' style={{ position: 'relative', width: '118px', height: '118px', minHeight: '118px' }}>
                         <Image
                             src={image.img}
                             alt="Picture of the author"
@@ -90,7 +90,6 @@ function MenuItem({ id, title, description, price, image }: Props) {
                             fill
                             style={{
                                 objectFit: 'cover',
-                                borderRadius: '8px',
                             }}
                         />
                     </div>
