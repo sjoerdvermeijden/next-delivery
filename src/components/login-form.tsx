@@ -33,11 +33,9 @@ function LoginForm({ }: Props) {
                 <span className='inline-flex w-full h-1.5 border-t border-t-gray-200 mt-1'></span>
             </div>
             <form action="" className='flex flex-col mb-4'>
-                <label htmlFor="email" className='mb-1 text-xs font-bold'>Email</label>
-                <input className='mb-2 border border-gray-700 p-2 rounded-xl' type="email" name="" id="email" />
-                <label htmlFor="wachtwoord" className='mb-1 text-xs font-bold'>Wachtwoord</label>
-                <input className='mb-4 border border-gray-700 p-2 rounded-xl' type="password" name="" id="wachtwoord" />
-                <input className='bg-orange-500 p-2 text-white font-bold rounded-3xl' type="submit" value="Log in" />
+                <label htmlFor="email" className='mb-1.5 text-xs font-bold'>Doorgaan met e-mailadres</label>
+                <input className='mb-2 border border-gray-700 p-2 rounded-xl' placeholder="Doorgaan met email" type="email" name="" id="email" />
+                <input className='bg-orange-500 p-2 text-white font-bold rounded-3xl' type="submit" value="Verificatie code" />
             </form>
             <div className='flex items-center mb-4'>
                 <span className='inline-flex w-full grow h-1.5 border-t border-t-gray-200 mt-1 mr-4'></span>

@@ -32,13 +32,13 @@ function RegisterForm({ }: Props) {
                 <p className='flex justify-center text-gray-600 font-light text-sm mr-4'>Of</p>
                 <span className='inline-flex w-full h-1.5 border-t border-t-gray-200 mt-1'></span>
             </div>
-            <form action="" className='flex flex-col mb-4'>
-                <label htmlFor="name" className='mb-1 text-xs font-bold'>Naam</label>
-                <input className='mb-3 border p-2 rounded-xl' type="text" name="" id="name" />
-                <label htmlFor="email" className='mb-1 text-xs font-bold'>E-mailadres</label>
-                <input className='mb-3 border p-2 rounded-xl' type="email" name="" id="email" />
-                <label htmlFor="wachtwoord" className='mb-1 text-xs font-bold'>Wachtwoord</label>
-                <input className='mb-4 border p-2 rounded-xl' type="password" name="" id="wachtwoord" />
+            <form action="" className='flex flex-col mb-6'>
+                <label htmlFor="name" className='mb-1.5 text-xs font-bold'>Naam</label>
+                <input className='mb-3 border p-2 rounded-xl' placeholder="Naam" type="text" name="" id="name" />
+                <label htmlFor="email" className='mb-1.5 text-xs font-bold'>E-mailadres</label>
+                <input className='mb-3 border p-2 rounded-xl' placeholder="Email" type="email" name="" id="email" />
+                <label htmlFor="wachtwoord" className='mb-1.5 text-xs font-bold'>Wachtwoord</label>
+                <input className='mb-4 border p-2 rounded-xl' placeholder="Wachtwoord" type="password" name="" id="wachtwoord" />
                 <input className='bg-orange-500 p-2 text-white font-bold rounded-3xl' type="submit" value="Registreren" />
             </form>
             <div className='flex justify-center text-xs'>
