@@ -42,7 +42,8 @@ function LoginForm({ }: Props) {
                 <p className='flex flex-shrink-0 text-gray-600 font-light text-sm mr-4'>Nog niet geregistreerd?</p>
                 <span className='inline-flex w-full h-1.5 border-t border-t-gray-200 mt-1'></span>
             </div>
-            <Link href="/create-account" className='border border-gray-400 text-black p-2 text-center font-bold rounded-3xl transition-colors block hover:bg-gray-100'>Account aanmaken</Link>
+            <Link href="/create-account" className='border border-gray-400 text-black p-2 text-center font-semibold rounded-3xl transition-colors block hover:bg-gray-100 mb-6'>Account aanmaken</Link>
+            <p className='text-[12px] text-gray-600 w-[90%] m-auto text-center'>Door in te loggen op ons account, ga je akkoord met onze <span className='font-bold undeline'>Algemene voorwaarden</span>. Lees onze <span className='font-bold underline'>Privacyverklaring</span> en ons <span className='font-bold underline'>Cookiebeleid</span>.</p>
         </>
     )
 }
