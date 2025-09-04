@@ -72,7 +72,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
     return (
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger className="w-full">
-                <div className='relative flex grow rounded-xl shadow-[0px_2px_6px_2px_rgba(0,0,0,.06)] p-4 hover:bg-gray-100 cursor-pointer'>
+                <div className='relative flex grow p-4 border-t border-gray-200 md:border-none md:rounded-xl md:shadow-[0px_2px_6px_2px_rgba(0,0,0,.06)] hover:bg-gray-100 cursor-pointer'>
                     <div className='flex flex-col items-start mr-auto text-left'>
                         <h1 className='text-xl mb-2 font-bold'>{title}</h1>
                         <p className='font-bold text-sm mb-2'>€{price}</p>
