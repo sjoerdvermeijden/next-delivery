@@ -34,15 +34,29 @@ function RestaurantPage() {
                         {
                             restaurant &&
                             <>
-                                <Image
-                                    priority
-                                    src={restaurant.image.img}
-                                    width={910}
-                                    height={200}
-                                    style={{ position: 'absolute', top: '0px', right: '0px', bottom: '0px', left: '0px', objectFit: "cover", width: '100%' }}
-                                    quality={100}
-                                    alt="Picture of the author"
-                                />
+                                <figure className='absolute top-0 right-0 bottom-0 left-0 w-full'>
+                                    <Image
+                                        priority
+                                        src={restaurant.image.img}
+                                        width={910}
+                                        height={200}
+                                        style={{ objectFit: "cover", width: '100%' }}
+                                        quality={100}
+                                        alt="Picture of the author"
+                                        />
+                                </figure>
+                                <div className='relative container mx-auto py-4 h-full'>
+                                    <figure className='absolute bottom-3 left-3 w-[54px] h-[54px] rounded-lg overflow-hidden lg:bottom-4 lg:h-[80px] lg:w-[80px]'>
+                                    <Image
+                                        src="https://placehold.co/60x60"
+                                        width={100}
+                                        height={100}
+                                        style={{ objectFit: "cover"}}
+                                        quality={75}
+                                        alt="placeholder"
+                                        />
+                                    </figure>
+                                </div>
                             </>
                         }
                     </div>
