@@ -44,7 +44,7 @@ function Header({ }: Props) {
                         <DialogTrigger>
                             <IconMenu2 stroke={2} />
                         </DialogTrigger>
-                        <DialogContent className='fixed top-0 right-0 bottom-0 left-0 w-full translate-y-0 translate-x-0 bg-white border-0 p-5 md:-mt-20 md:top-[25%] md:right-[50%] md:left-[50%] md:bottom-[auto] md:-translate-y-[50%] md:-translate-x-[50%] md:rounded-2xl md:w-[600px] md:max-w-[600px]'>
+                        <DialogContent className='fixed top-0 right-0 bottom-0 left-0 w-full translate-y-0 translate-x-0 bg-white border-0 p-5 md:-mt-20 md:top-[45%] md:right-[50%] md:left-[50%] md:bottom-[auto] md:-translate-y-[50%] md:-translate-x-[50%] md:rounded-2xl md:w-[600px] md:max-w-[600px]'>
                             <DialogHeader>
                                 <DialogTitle className='text-2xl font-bold mb-4'>Mijn account</DialogTitle>
                                     <div className='flex'>
@@ -56,6 +56,21 @@ function Header({ }: Props) {
                                         </DialogClose>
                                     </div>
                             </DialogHeader>
+                            <div className="flex flex-col gap-0">
+                                <ul className='border-b pb-2 mb-2'>
+                                    <li className='p-4 text-gray-600 font-light text-sm hover:bg-gray-100 hover:cursor-pointer'>Bestellingen</li>
+                                </ul>
+                                <ul className='border-b pb-2 mb-2'>
+                                    <li className='p-4 text-gray-600 font-light text-sm hover:bg-gray-100 hover:cursor-pointer'>Stempelkaarten</li>
+                                    <li className='p-4 text-gray-600 font-light text-sm hover:bg-gray-100 hover:cursor-pointer'>Hulp nodig</li>
+                                    <li className='p-4 text-gray-600 font-light text-sm hover:bg-gray-100 hover:cursor-pointer'>Cadeaukaarten</li>
+                                </ul>
+                                <ul className='border-b pb-2'>
+                                    <li className='p-4 text-gray-600 font-light text-sm hover:bg-gray-100 hover:cursor-pointer'>Wordt bezorger</li>
+                                    <li className='p-4 text-gray-600 font-light text-sm hover:bg-gray-100 hover:cursor-pointer'>Thuisbezorgd.nl for business</li>
+                                    <li className='p-4 text-gray-600 font-light text-sm hover:bg-gray-100 hover:cursor-pointer'>Word partner</li>
+                                </ul>
+                            </div>
                         </DialogContent>
                     </Dialog>
                 </div>
