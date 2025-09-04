@@ -71,7 +71,7 @@ function RestaurantPage() {
                                 </span>
                             </div>
                         </div>
-                        <ul className='grid lg:gap-2'>
+                        <ul className='grid md:gap-2'>
                             {
                                 restaurant?.menu.map((item) => {
                                     return <li key={item.id} className='flex grow'>
