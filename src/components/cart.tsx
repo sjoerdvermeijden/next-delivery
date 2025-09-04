@@ -67,7 +67,7 @@ function Cart({ }: Props) {
                 cartItems.length <= 0 &&
                     !responsiveState ? <></>
                     :         
-                    <div className={`${responsiveState ? 'fixed bottom-0' : 'fixed h-full top-0'}  bg-white left-0 w-full z-20 shadow-[0px_0px_6px_0px_rgba(0,_0,_0,_0.1)] p-5 lg:z-10 lg:relative lg:w-80 lg:h-auto`}>
+                    <div className={`${responsiveState ? 'fixed bottom-0' : 'fixed h-full top-0'}  bg-white left-0 w-full z-20 shadow-[0px_0px_6px_0px_rgba(0,_0,_0,_0.1)] p-4 lg:z-10 lg:relative lg:w-80 lg:h-auto`}>
                         <div className='sticky top-8 left-8'>
                             <div className={`${responsiveState ? 'hidden' : 'mb-5 block'} justify-center items-center flex lg:block`}>
                                 <h3 className='text-2xl font-extrabold text-center mr-auto lg:mr-0'>Winkelmandje</h3>
@@ -122,7 +122,7 @@ function Cart({ }: Props) {
                                                 width < 1024 ?
 
                                                     responsiveState ?
-                                                        <button className="block w-full text-center text-lg font-bold bg-orange-500 text-white p-2 rounded-3xl" onClick={(e) => orderButton(e)}>Zie winkelmandje (€{Math.abs(total).toFixed(2)})</button>
+                                                        <button className="block w-full text-center text-lg font-bold bg-orange-500 text-white p-2 rounded-3xl" onClick={(e) => orderButton(e)}>Bekijk winkelmandje (€{Math.abs(total).toFixed(2)})</button>
                                                         :
                                                         <Link href="/account" className="block w-full text-center text-lg font-bold bg-orange-500 text-white p-2 rounded-3xl">Bestellen (€{Math.abs(total).toFixed(2)})</Link>
                                                 :
