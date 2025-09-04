@@ -81,7 +81,7 @@ function MenuItem({ id, title, description, price, image }: Props) {
                             +
                         </div>
                     </div>
-                    <div className='hidden rounded-l-3xl md:block' style={{ position: 'relative', width: '119px', height: '119px', minHeight: '119px' }}>
+                    <div className='flex shrink-0 rounded-l-3xl' style={{ position: 'relative', width: '119px', height: '119px', minHeight: '119px' }}>
                         <Image
                             src={image.img}
                             alt="Picture of the author"
