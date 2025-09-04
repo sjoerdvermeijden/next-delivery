@@ -29,7 +29,7 @@ function RestaurantPage() {
     return (
         <>
             <div className='flex flex-col w-full'>
-                <div className='pt-4 pr-4 pl-4 md:p-0'>
+                <div className='pt-5 pr-4 pl-4 md:p-0'>
                     <div className='relative h-[170px] rounded-2xl md:rounded-none md:h-[320px] lg:h-[480px] overflow-hidden'>
                         {
                             restaurant &&
