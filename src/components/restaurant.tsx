@@ -19,18 +19,30 @@ function Restaurant({ name, categories, image, reviews, delivery_time, delivery_
     return (
         <>
             <div className='flex flex-col overflow-hidden shadow-[0px_2px_6px_2px_rgba(0,0,0,.06)] rounded-2xl lg:flex-row'>
-                <figure className='relative min-h-[145px] lg:rounded-l-md lg:w-[290px]'>
-                    <Image
-                        src={image?.img}
-                        sizes="150px"
-                        priority
-                        fill
-                        style={{
-                            objectFit: 'cover',
-                        }}
-                        alt="Picture of the author"
-                    />
-                </figure>
+                <div className='relative'>
+                    <figure className='relative min-h-[145px] lg:rounded-l-md lg:w-[290px]'>
+                        <Image
+                            src={image?.img}
+                            sizes="150px"
+                            priority
+                            fill
+                            style={{
+                                objectFit: 'cover',
+                            }}
+                            alt="Picture of the author"
+                        />
+                    </figure>
+                    <figure className='absolute bottom-3 left-3 w-[44px] h-[44px] rounded-lg overflow-hidden lg:bottom-4'>
+                        <Image
+                            src="https://placehold.co/60x60"
+                            width={100}
+                            height={100}
+                            style={{ objectFit: "cover"}}
+                            quality={75}
+                            alt="placeholder"
+                            />
+                    </figure>
+                </div>
                 <div className='flex flex-col items-start justify-center pt-4 pr-4 pb-4 pl-5 grow transition-colors'>
                     <h3 className='font-bold mb-2 text-lg'>{name}</h3>
                     <div className='flex mb-2'>
