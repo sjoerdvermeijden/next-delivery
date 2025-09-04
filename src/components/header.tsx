@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useRouter } from 'next/navigation'
 
-import { IconChevronLeft, IconMenu2 } from '@tabler/icons-react';
+import { IconChevronLeft, IconMenu2, IconShoppingBag, IconInfoCircle, IconScooter, IconBuilding, IconLayersIntersect, IconCreditCard, IconBuildingStore } from '@tabler/icons-react';
 
 import {
     Dialog,
@@ -58,17 +58,52 @@ function Header({ }: Props) {
                             </DialogHeader>
                             <div className="flex flex-col gap-0">
                                 <ul className='border-b pb-2 mb-2'>
-                                    <li className='p-4 text-gray-600 font-light text-sm hover:bg-gray-100 hover:cursor-pointer'>Bestellingen</li>
+                                    <li className='flex items-center px-4 py-3 text-gray-600 font-light text-sm hover:bg-gray-100 hover:cursor-pointer'>
+                                        <span className='inline-block mr-4'>
+                                            <IconShoppingBag stroke={2} size={24} />
+                                        </span>
+                                        Bestellingen
+                                    </li>
                                 </ul>
                                 <ul className='border-b pb-2 mb-2'>
-                                    <li className='p-4 text-gray-600 font-light text-sm hover:bg-gray-100 hover:cursor-pointer'>Stempelkaarten</li>
-                                    <li className='p-4 text-gray-600 font-light text-sm hover:bg-gray-100 hover:cursor-pointer'>Hulp nodig</li>
-                                    <li className='p-4 text-gray-600 font-light text-sm hover:bg-gray-100 hover:cursor-pointer'>Cadeaukaarten</li>
+                                    <li className='flex items-center px-4 py-3 text-gray-600 font-light text-sm hover:bg-gray-100 hover:cursor-pointer'>
+                                        <span className='inline-block mr-4'>
+                                            <IconLayersIntersect stroke={2} size={24} />
+                                        </span>
+                                        Stempelkaarten
+                                    </li>
+                                    <li className='flex items-center px-4 py-3 text-gray-600 font-light text-sm hover:bg-gray-100 hover:cursor-pointer'>
+                                        <span className='inline-block mr-4'>
+                                            <IconInfoCircle stroke={2} size={24} />
+                                        </span>
+                                        Hulp nodig
+                                    </li>
+                                    <li className='flex items-center px-4 py-3 text-gray-600 font-light text-sm hover:bg-gray-100 hover:cursor-pointer'>
+                                        <span className='inline-block mr-4'>
+                                            <IconCreditCard stroke={2} size={24} />
+                                        </span>
+                                        Cadeaukaarten
+                                    </li>
                                 </ul>
-                                <ul className='border-b pb-2'>
-                                    <li className='p-4 text-gray-600 font-light text-sm hover:bg-gray-100 hover:cursor-pointer'>Wordt bezorger</li>
-                                    <li className='p-4 text-gray-600 font-light text-sm hover:bg-gray-100 hover:cursor-pointer'>Thuisbezorgd.nl for business</li>
-                                    <li className='p-4 text-gray-600 font-light text-sm hover:bg-gray-100 hover:cursor-pointer'>Word partner</li>
+                                <ul>
+                                    <li className='flex items-center px-4 py-3 text-gray-600 font-light text-sm hover:bg-gray-100 hover:cursor-pointer'>
+                                        <span className='inline-block mr-4'>
+                                            <IconScooter stroke={2} size={24} />
+                                        </span>
+                                        Wordt bezorger
+                                    </li>
+                                    <li className='flex items-center px-4 py-3 text-gray-600 font-light text-sm hover:bg-gray-100 hover:cursor-pointer'>
+                                        <span className='inline-block mr-4'>
+                                            <IconBuilding stroke={2} size={24} />
+                                        </span>
+                                        Thuisbezorgd.nl for business
+                                    </li>
+                                    <li className='flex items-center px-4 py-3 text-gray-600 font-light text-sm hover:bg-gray-100 hover:cursor-pointer'>
+                                        <span className='inline-block mr-4'>
+                                            <IconBuildingStore stroke={2} size={24} />
+                                        </span>
+                                        Word partner
+                                    </li>
                                 </ul>
                             </div>
                         </DialogContent>
