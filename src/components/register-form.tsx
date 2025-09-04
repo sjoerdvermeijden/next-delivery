@@ -41,10 +41,11 @@ function RegisterForm({ }: Props) {
                 <input className='mb-4 border p-2 rounded-xl placeholder:text-sm' placeholder="Wachtwoord" type="password" name="" id="wachtwoord" />
                 <input className='bg-orange-500 p-2 text-white font-bold rounded-3xl' type="submit" value="Registreren" />
             </form>
-            <div className='flex justify-center text-xs'>
+            <div className='flex justify-center text-xs mb-6'>
                 <p className='inline-block mr-1.5'>Heb je al een account? </p>
                 <Link href="/account" className='underline'>Inloggen</Link>
             </div>
+            <p className='text-[12px] text-gray-600 w-[90%] m-auto text-center'>Door een account aan te maken ga je akkoord met onze <span className='font-bold undeline'>Algemene voorwaarden</span>. Lees onze <span className='font-bold underline'>Privacyverklaring</span> en ons <span className='font-bold underline'>Cookiebeleid</span>.</p>
         </>
     )
 }
