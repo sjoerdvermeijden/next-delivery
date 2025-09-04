@@ -50,9 +50,9 @@ function RestaurantPage() {
                 {
                     restaurant &&
                     <div className="container mx-auto mb-11 py-4 md:px-4 md:mb-0">
-                        <div className='px-4 md:px-0'>
+                        <div className='px-4 md:px-0 mb-4'>
                             <h1 className='font-bold mb-2 text-2xl'>{restaurant?.name}</h1>
-                            <div className='flex items-center mb-6'>
+                            <div className='flex items-center'>
                                 <span className='text-sm mr-2 inline-flex items-center after:w-1 after:h-1 after:bg-black after:rounded-[50%] after:ml-2'>
                                     <div className='w-4 h-4 mr-2 -mt-0.5'>
                                         <IconClock stroke={2} size={17} />
