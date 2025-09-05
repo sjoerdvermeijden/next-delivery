@@ -63,7 +63,7 @@ function RestaurantPage() {
                 </div>
                 {
                     restaurant &&
-                    <div className="container mx-auto mb-11 py-4 md:px-4 md:mb-0">
+                    <div className="container mx-auto mb-11 pt-4 pb-6 md:px-4 md:mb-0">
                         <div className='px-4 md:px-0 mb-4'>
                             <h1 className='font-bold mb-2 text-2xl'>{restaurant?.name}</h1>
                             <div className='flex items-center'>

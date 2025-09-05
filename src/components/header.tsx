@@ -10,7 +10,6 @@ import { IconChevronLeft, IconMenu2, IconShoppingBag, IconInfoCircle, IconScoote
 import {
     Dialog,
     DialogContent,
-    DialogDescription,
     DialogHeader,
     DialogTitle,
     DialogTrigger,
