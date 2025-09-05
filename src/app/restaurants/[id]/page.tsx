@@ -41,7 +41,7 @@ function RestaurantPage() {
                                         width={910}
                                         height={200}
                                         style={{ objectFit: "cover", width: '100%', height: '100%' }}
-                                        quality={100}
+                                        quality={80}
                                         alt="Picture of the author"
                                         />
                                 </figure>
