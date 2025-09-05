@@ -50,8 +50,8 @@ function Header({ }: Props) {
                                 </DialogHeader>
                                 <DialogClose asChild>
                                     <button type="button" className='relative w-8 h-8 transition-colors  rounded-md hover:bg-gray-100'>
-                                        <span className='inline-block absolute right-2 top-4 w-4 h-0.5 bg-gray-900 rotate-[45deg]'></span>
-                                        <span className='inline-block absolute right-2 top-4 w-4 h-0.5 bg-gray-900 -rotate-[45deg]'></span>
+                                        <span className='inline-block absolute right-1.5 top-4 w-5 h-0.5 bg-gray-900 rotate-[45deg]'></span>
+                                        <span className='inline-block absolute right-1.5 top-4 w-5 h-0.5 bg-gray-900 -rotate-[45deg]'></span>
                                     </button>
                                 </DialogClose>
                             </div>
