@@ -55,7 +55,7 @@ function Header({ }: Props) {
                                     </button>
                                 </DialogClose>
                             </div>
-                            <div className='flex'>
+                            <div className='flex mb-4'>
                                 <DialogClose asChild>
                                     <Link href="/account" className='text-center mr-4 text-lg text-black font-bold bg-gray-100 p-2 rounded-3xl w-[50%]'>Inloggen</Link>
                                 </DialogClose>
