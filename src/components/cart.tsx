@@ -105,10 +105,10 @@ function Cart({ }: Props) {
                                                                         <p>€{(item.price * item.count).toFixed(2)}</p>
                                                                     </div>
                                                                 </div>
-                                                                <div className='flex bg-stone-200 rounded-2xl'>
-                                                                    <button className='rounded-[50%] w-[33px] h-[33px] flex items-center justify-center px-2 font-light text-3xl hover:bg-stone-200' onClick={(e) => subtractItem(e, item.id)}>-</button>
+                                                                <div className='flex bg-gray-100 rounded-2xl'>
+                                                                    <button className='rounded-[50%] w-[33px] h-[33px] flex items-center justify-center px-2 font-light text-3xl hover:bg-gray-200' onClick={(e) => subtractItem(e, item.id)}>-</button>
                                                                     <div className="flex items-center justify-center px-2 text-lg">{item.count}</div>
-                                                                    <button className='rounded-[50%] w-[33px] h-[33px] flex items-center justify-center px-2 font-light text-3xl hover:bg-stone-200' onClick={(e) => addItem(e, item.id)}>+</button>
+                                                                    <button className='rounded-[50%] w-[33px] h-[33px] flex items-center justify-center px-2 font-light text-3xl hover:bg-gray-200' onClick={(e) => addItem(e, item.id)}>+</button>
                                                                 </div>
                                                             </div>
                                                         </li>
